@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forge Digital — Premium Web Design Studio</title>
+  <meta name="description" content="We build websites that make your business impossible to ignore. Custom web design from $499.99."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <div class="logo-hex-wrap">
+          <svg viewBox="0 0 32 32" fill="none" class="logo-svg"><path d="M16 2L29 9.5V22.5L16 30L3 22.5V9.5L16 2Z" stroke="#C9A84C" stroke-width="1.2"/><path d="M16 8L23.5 12.5V21.5L16 26L8.5 21.5V12.5L16 8Z" stroke="#C9A84C" stroke-width="0.5" stroke-dasharray="2 2"/></svg>
+        </div>
+        <span>Forge<em>Digital</em></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#portfolio">Work</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Start a Project</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- MOBILE DRAWER -->
+  <div class="drawer" id="drawer">
+    <div class="drawer-links">
+      <a href="#portfolio" class="drawer-link">Work</a>
+      <a href="#services" class="drawer-link">Services</a>
+      <a href="#pricing" class="drawer-link">Pricing</a>
+      <a href="#contact" class="drawer-link">Contact</a>
+      <a href="#contact" class="drawer-cta">Start a Project →</a>
+    </div>
+    <div class="drawer-foot">
+      <span>hello@forgedigital.com</span>
+      <span>@forgedigital</span>
+    </div>
+  </div>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <!-- ══════════════════════════════════ HERO ══════════════════════════════════ -->
+  <section class="hero" id="hero">
+
+    <!-- Parallax BG layers (background only) -->
+    <div class="parallax-layer">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+    <div class="parallax-layer">
+      <div class="geo-ring geo-1"></div>
+      <div class="geo-ring geo-2"></div>
+    </div>
+    <div class="hero-grid-bg"></div>
+
+    <div class="hero-inner">
+      <!-- Text column -->
+      <div class="hero-text">
+        <p class="hero-eyebrow" data-reveal="fade-up">Premium Web Design Studio</p>
+        <div class="hero-headline">
+          <div class="h-line" style="--d:0ms"><span class="hw">We</span><span class="hw italic-w">build</span></div>
+          <div class="h-line" style="--d:100ms"><span class="hw">High</span><span class="hw">performance</span></div>
+          <div class="h-line" style="--d:200ms"><span class="hw">Websites</span><span class="hw">for</span></div>
+          <div class="h-line gold-line" style="--d:300ms"><span class="hw">every</span><span class="hw">business.</span></div>
+        </div>
+        <p class="hero-sub" data-reveal="fade-up" data-delay="500">
+          Built from scratch, tailored to your brand.<br/>No templates. No shortcuts. Just results.
+        </p>
+        <div class="hero-actions" data-reveal="fade-up" data-delay="650">
+          <a href="#contact" class="btn-gold">Get Your Website →</a>
+          <a href="#portfolio" class="btn-ghost-sm">See Our Work</a>
+        </div>
+        <div class="hero-stats" data-reveal="fade-up" data-delay="800">
+          <div class="hs"><strong class="counter" data-target="7">0</strong><p>Sites Launched</p></div>
+          <div class="hs-div"></div>
+          <div class="hs"><strong class="counter" data-target="98">0</strong><span>%</span><p>Client Satisfaction</p></div>
+          <div class="hs-div"></div>
+          <div class="hs">
+            <div class="live-badge"><span class="live-dot"></span><span>Live</span></div>
+            <p>Deployed</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3D Gem Visual -->
+      <div class="hero-3d-wrap" data-reveal="fade-up" data-delay="300">
+        <div class="forge-gem-scene">
+          <svg class="forge-gem-svg" viewBox="0 0 460 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="gemGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#C9A84C" stop-opacity="0.22"/>
+                <stop offset="55%" stop-color="#C9A84C" stop-opacity="0.07"/>
+                <stop offset="100%" stop-color="#C9A84C" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="innerGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#C9A84C" stop-opacity="0.9"/>
+                <stop offset="40%" stop-color="#C9A84C" stop-opacity="0.5"/>
+                <stop offset="100%" stop-color="#C9A84C" stop-opacity="0"/>
+              </radialGradient>
+              <filter id="fglow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="softBlur" x="-60%" y="-60%" width="220%" height="220%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="14"/>
+              </filter>
+            </defs>
+
+            <!-- Background radial glow -->
+            <circle cx="230" cy="210" r="190" fill="url(#gemGlow)"/>
+
+            <!-- Soft center halo -->
+            <circle cx="230" cy="210" r="90" fill="#C9A84C" fill-opacity="0.05" filter="url(#softBlur)"/>
+
+            <!-- ── Orbiting rings (animated via SMIL) ── -->
+            <!-- Ring 1: large flat horizontal orbit -->
+            <g>
+              <ellipse cx="230" cy="210" rx="200" ry="52" stroke="#C9A84C" stroke-opacity="0.13" stroke-width="1" fill="none"/>
+              <circle cx="430" cy="210" r="4" fill="#C9A84C" fill-opacity="0.7" filter="url(#fglow)"/>
+              <circle cx="30"  cy="210" r="2.5" fill="#C9A84C" fill-opacity="0.35"/>
+              <circle cx="230" cy="158" r="2" fill="#C9A84C" fill-opacity="0.4"/>
+              <circle cx="230" cy="262" r="2" fill="#C9A84C" fill-opacity="0.3"/>
+              <animateTransform attributeName="transform" type="rotate"
+                values="0 230 210;360 230 210" dur="22s" repeatCount="indefinite"/>
+            </g>
+
+            <!-- Ring 2: tilted at 50° -->
+            <g transform="rotate(-50 230 210)">
+              <ellipse cx="230" cy="210" rx="150" ry="40" stroke="#C9A84C" stroke-opacity="0.2" stroke-width="1.2" fill="none"/>
+              <circle cx="380" cy="210" r="3.5" fill="#C9A84C" fill-opacity="0.8" filter="url(#fglow)"/>
+              <circle cx="80"  cy="210" r="2" fill="#C9A84C" fill-opacity="0.3"/>
+              <animateTransform attributeName="transform" type="rotate"
+                values="-50 230 210;310 230 210" dur="15s" repeatCount="indefinite"/>
+            </g>
+
+            <!-- Ring 3: counter-rotating inner ring -->
+            <g transform="rotate(30 230 210)">
+              <ellipse cx="230" cy="210" rx="105" ry="28" stroke="#C9A84C" stroke-opacity="0.28" stroke-width="1" fill="none"/>
+              <circle cx="335" cy="210" r="3" fill="#C9A84C" fill-opacity="0.9" filter="url(#fglow)"/>
+              <circle cx="125" cy="210" r="2" fill="#C9A84C" fill-opacity="0.4"/>
+              <animateTransform attributeName="transform" type="rotate"
+                values="30 230 210;-330 230 210" dur="10s" repeatCount="indefinite"/>
+            </g>
+
+            <!-- ── Hex faces (nested, creating depth) ── -->
+            <!-- Outermost hex -->
+            <polygon points="230,105 325,158 325,264 230,317 135,264 135,158"
+              fill="rgba(201,168,76,0.04)" stroke="#C9A84C" stroke-opacity="0.3" stroke-width="0.8"/>
+
+            <!-- Mid hex -->
+            <polygon points="230,135 300,175 300,255 230,295 160,255 160,175"
+              fill="rgba(201,168,76,0.055)" stroke="#C9A84C" stroke-opacity="0.38" stroke-width="1"/>
+
+            <!-- Inner hex -->
+            <polygon points="230,162 277,189 277,243 230,270 183,243 183,189"
+              fill="rgba(201,168,76,0.09)" stroke="#C9A84C" stroke-opacity="0.52" stroke-width="1.2"/>
+
+            <!-- Core hex -->
+            <polygon points="230,183 258,199 258,231 230,247 202,231 202,199"
+              fill="rgba(201,168,76,0.16)" stroke="#C9A84C" stroke-opacity="0.72" stroke-width="1.6"/>
+
+            <!-- Spoke lines from center to outer hex vertices -->
+            <g stroke="#C9A84C" stroke-opacity="0.07" stroke-width="0.6">
+              <line x1="230" y1="210" x2="230" y2="105"/>
+              <line x1="230" y1="210" x2="325" y2="158"/>
+              <line x1="230" y1="210" x2="325" y2="264"/>
+              <line x1="230" y1="210" x2="230" y2="317"/>
+              <line x1="230" y1="210" x2="135" y2="264"/>
+              <line x1="230" y1="210" x2="135" y2="158"/>
+            </g>
+
+            <!-- Horizontal scan grid lines -->
+            <g stroke="#C9A84C" stroke-opacity="0.045" stroke-width="0.5">
+              <line x1="90" y1="178" x2="370" y2="178"/>
+              <line x1="90" y1="198" x2="370" y2="198"/>
+              <line x1="90" y1="218" x2="370" y2="218"/>
+              <line x1="90" y1="238" x2="370" y2="238"/>
+              <line x1="90" y1="258" x2="370" y2="258"/>
+            </g>
+
+            <!-- ── Isometric depth faces (bottom panels) ── -->
+            <polygon points="135,264 230,317 230,357 135,304"
+              fill="rgba(201,168,76,0.03)" stroke="#C9A84C" stroke-opacity="0.14" stroke-width="0.7"/>
+            <polygon points="325,264 230,317 230,357 325,304"
+              fill="rgba(201,168,76,0.02)" stroke="#C9A84C" stroke-opacity="0.1" stroke-width="0.7"/>
+            <line x1="230" y1="317" x2="230" y2="357" stroke="#C9A84C" stroke-opacity="0.22" stroke-width="0.8"/>
+
+            <!-- Bottom base accent -->
+            <circle cx="230" cy="357" r="2.5" fill="#C9A84C" fill-opacity="0.3" filter="url(#fglow)"/>
+            <circle cx="135" cy="304" r="1.5" fill="#C9A84C" fill-opacity="0.2"/>
+            <circle cx="325" cy="304" r="1.5" fill="#C9A84C" fill-opacity="0.2"/>
+
+            <!-- ── Vertex accent dots (outer hex) ── -->
+            <g filter="url(#fglow)">
+              <circle cx="230" cy="105" r="3.5" fill="#C9A84C" fill-opacity="0.85"/>
+              <circle cx="325" cy="158" r="3"   fill="#C9A84C" fill-opacity="0.65"/>
+              <circle cx="325" cy="264" r="3"   fill="#C9A84C" fill-opacity="0.55"/>
+              <circle cx="230" cy="317" r="3.5" fill="#C9A84C" fill-opacity="0.75"/>
+              <circle cx="135" cy="264" r="3"   fill="#C9A84C" fill-opacity="0.55"/>
+              <circle cx="135" cy="158" r="3"   fill="#C9A84C" fill-opacity="0.65"/>
+            </g>
+
+            <!-- ── Central glowing core ── -->
+            <circle cx="230" cy="210" r="34" fill="rgba(201,168,76,0.1)"/>
+            <circle cx="230" cy="210" r="20" fill="rgba(201,168,76,0.22)"/>
+            <circle cx="230" cy="210" r="10" fill="rgba(201,168,76,0.55)" filter="url(#fglow)">
+              <animate attributeName="r" values="10;13;10" dur="2.8s" repeatCount="indefinite"/>
+              <animate attributeName="fill-opacity" values="0.55;0.85;0.55" dur="2.8s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="230" cy="210" r="4.5" fill="#C9A84C"/>
+          </svg>
+
+          <!-- Floating metric badges -->
+          <div class="gem-badge gem-badge-1">
+            <div class="gb-icon">⚡</div>
+            <div class="gb-text"><strong>99</strong><span>Lighthouse</span></div>
+          </div>
+          <div class="gem-badge gem-badge-2">
+            <div class="gb-icon">✦</div>
+            <div class="gb-text"><strong>Always</strong><span>Maintained</span></div>
+          </div>
+          <div class="gem-badge gem-badge-3">
+            <div class="gb-icon">◎</div>
+            <div class="gb-text"><strong>7 Sites</strong><span>Launched</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker-wrap">
+    <div class="ticker-track">
+      <div class="ticker-inner">
+        <span>Custom Design</span><span class="td">✦</span><span>Stripe Payments</span><span class="td">✦</span>
+        <span>Mobile-First</span><span class="td">✦</span><span>SEO Optimized</span><span class="td">✦</span>
+        <span>Managed Hosting</span><span class="td">✦</span><span>7-Day Delivery</span><span class="td">✦</span>
+        <span>Conversion Focused</span><span class="td">✦</span><span>Lightning Fast</span><span class="td">✦</span>
+        <!-- duplicate -->
+        <span>Custom Design</span><span class="td">✦</span><span>Stripe Payments</span><span class="td">✦</span>
+        <span>Mobile-First</span><span class="td">✦</span><span>SEO Optimized</span><span class="td">✦</span>
+        <span>Managed Hosting</span><span class="td">✦</span><span>7-Day Delivery</span><span class="td">✦</span>
+        <span>Conversion Focused</span><span class="td">✦</span><span>Lightning Fast</span><span class="td">✦</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════ PORTFOLIO ══════════════════════════════════ -->
+  <section class="portfolio-section" id="portfolio">
+    <div class="container">
+      <div class="section-label" data-reveal="fade-up"><span class="lline"></span><span>Selected Work</span></div>
+      <div class="portfolio-header">
+        <h2 class="section-heading" data-reveal="fade-up" data-delay="80">
+          Websites that<br/><em>do the talking.</em>
+        </h2>
+        <p class="section-sub" data-reveal="fade-up" data-delay="180">Every site we ship is custom-built, obsessively tested, and designed to convert. Here's a taste of what we forge.</p>
+      </div>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <!-- Card 1: AURUM Restaurant -->
+      <div class="port-card" data-tilt data-reveal="fade-up" data-delay="0">
+        <div class="port-preview">
+          <div class="mini-site aurum-site full-preview">
+            <div class="ms-nav"><div class="ms-logo">AURUM</div><div class="ms-links"><span></span><span></span><span></span></div><div class="ms-btn"></div></div>
+            <div class="ms-hero" style="background:linear-gradient(160deg,#1a0e05 0%,#2d1a08 55%,#0d0703 100%)">
+              <div class="ms-tag">Fine Dining Experience</div>
+              <div class="ms-h1">Elevated<br/>Cuisine<br/><em>Awaits</em></div>
+              <div class="ms-cta-row"><div class="ms-btn-g"></div><div class="ms-btn-o"></div></div>
+            </div>
+            <div class="ms-bar" style="background:#c9a84c10;border-top:1px solid #c9a84c25"><span style="color:#c9a84c99;font-size:5px;letter-spacing:.8px">MICHELIN STARRED · EST. 2019</span></div>
+            <div class="ms-grid2">
+              <div class="ms-img" style="background:linear-gradient(135deg,#3d2510,#1a0e05)"><div class="ms-img-label">Tasting Menu</div></div>
+              <div class="ms-img" style="background:linear-gradient(135deg,#0d0703,#3d2510)"><div class="ms-img-label">Private Events</div></div>
+            </div>
+            <div class="ms-footer" style="background:#060402;border-top:1px solid #ffffff08"><span>© 2024 Aurum</span><span>Reserve</span></div>
+          </div>
+          <div class="port-shine"></div>
+        </div>
+        <div class="port-info">
+          <div>
+            <h3>Aurum Restaurant</h3>
+            <p>Luxury dining brand with reservation system &amp; tasting menu showcase.</p>
+          </div>
+          <div class="port-tags"><span>Restaurant</span><span>Luxury</span><span>Booking</span></div>
+        </div>
+      </div>
+
+      <!-- Card 2: APEX Athletics -->
+      <div class="port-card" data-tilt data-reveal="fade-up" data-delay="80">
+        <div class="port-preview">
+          <div class="mini-site apex-site full-preview">
+            <div class="ms-nav apex-nav"><div class="ms-logo" style="color:#ff3d00">APEX</div><div class="ms-links"><span></span><span></span><span></span></div><div class="ms-btn" style="background:#ff3d00"></div></div>
+            <div class="ms-hero" style="background:linear-gradient(160deg,#0a0a0a 0%,#1a0500 60%,#0a0a0a 100%)">
+              <div class="ms-tag" style="border-color:#ff3d00;color:#ff3d00">Elite Performance</div>
+              <div class="ms-h1" style="font-family:sans-serif;font-weight:700;letter-spacing:-1px">TRAIN.<br/>DOMINATE.<br/><span style="color:#ff3d00">WIN.</span></div>
+              <div class="ms-cta-row"><div class="ms-btn-g" style="background:#ff3d00"></div><div class="ms-btn-o" style="border-color:#ff3d0066"></div></div>
+            </div>
+            <div class="ms-stats-row">
+              <div class="ms-stat"><div class="ms-stat-n" style="color:#ff3d00">200+</div><div class="ms-stat-l">Classes</div></div>
+              <div class="ms-stat"><div class="ms-stat-n" style="color:#ff3d00">50+</div><div class="ms-stat-l">Trainers</div></div>
+              <div class="ms-stat"><div class="ms-stat-n" style="color:#ff3d00">5K+</div><div class="ms-stat-l">Members</div></div>
+            </div>
+            <div class="ms-img-wide" style="background:linear-gradient(160deg,#1a0500,#0a0a0a)">
+              <div class="ms-img-label">Training Programs</div>
+            </div>
+            <div class="ms-footer" style="background:#070707;border-top:1px solid #ff3d0020"><span style="color:#ff3d0066">© 2024 APEX Athletics</span><span style="color:#ff3d0066">Join Now</span></div>
+          </div>
+          <div class="port-shine"></div>
+        </div>
+        <div class="port-info">
+          <div>
+            <h3>APEX Athletics</h3>
+            <p>High-energy fitness brand with class scheduling and membership portal.</p>
+          </div>
+          <div class="port-tags"><span>Fitness</span><span>E-Commerce</span><span>Booking</span></div>
+        </div>
+      </div>
+
+      <!-- Card 3: Sterling Law -->
+      <div class="port-card" data-tilt data-reveal="fade-up" data-delay="160">
+        <div class="port-preview">
+          <div class="mini-site sterling-site full-preview">
+            <div class="ms-nav" style="background:#0f1f3d;border-bottom:2px solid #c9a84c40"><div class="ms-logo" style="color:#f5f0e8;font-family:serif">STERLING</div><div class="ms-links"><span style="background:#f5f0e860"></span><span style="background:#f5f0e860"></span><span style="background:#f5f0e860"></span></div><div class="ms-btn" style="background:#c9a84c"></div></div>
+            <div class="ms-hero" style="background:linear-gradient(160deg,#0a1628 0%,#0f1f3d 60%,#071020 100%)">
+              <div class="ms-tag" style="border-color:#c9a84c60;color:#c9a84c">Trusted Legal Counsel</div>
+              <div class="ms-h1" style="font-family:serif;color:#f5f0e8">Justice.<br/>Experience.<br/><em style="color:#c9a84c">Results.</em></div>
+              <div class="ms-cta-row"><div class="ms-btn-g" style="background:#c9a84c"></div><div class="ms-btn-o" style="border-color:#c9a84c40"></div></div>
+            </div>
+            <div class="ms-bar" style="background:#0f1f3d;border-top:1px solid #c9a84c20"><span style="color:#c9a84c80;font-size:5px;letter-spacing:.8px">50+ YEARS COMBINED · 1200+ CASES WON</span></div>
+            <div class="ms-practice-areas">
+              <div class="ms-pa"><div class="ms-pa-icon" style="color:#c9a84c">⚖</div><div class="ms-pa-text">Corporate Law</div></div>
+              <div class="ms-pa"><div class="ms-pa-icon" style="color:#c9a84c">◎</div><div class="ms-pa-text">Civil Litigation</div></div>
+              <div class="ms-pa"><div class="ms-pa-icon" style="color:#c9a84c">✦</div><div class="ms-pa-text">Family Law</div></div>
+            </div>
+            <div class="ms-footer" style="background:#060d1a;border-top:1px solid #c9a84c15"><span style="color:#c9a84c40">© 2024 Sterling &amp; Assoc.</span><span style="color:#c9a84c40">Consult</span></div>
+          </div>
+          <div class="port-shine"></div>
+        </div>
+        <div class="port-info">
+          <div>
+            <h3>Sterling &amp; Associates</h3>
+            <p>Premium law firm with practice area pages, attorney profiles &amp; consultation booking.</p>
+          </div>
+          <div class="port-tags"><span>Law Firm</span><span>Professional</span><span>Forms</span></div>
+        </div>
+      </div>
+
+      <!-- Card 4: Luminary Estates -->
+      <div class="port-card" data-tilt data-reveal="fade-up" data-delay="0">
+        <div class="port-preview">
+          <div class="mini-site luminary-site full-preview">
+            <div class="ms-nav" style="background:transparent;border-bottom:1px solid #c9a84c20"><div class="ms-logo" style="color:#f5f0e8;letter-spacing:2px;font-size:7px">LUMINARY ESTATES</div><div class="ms-links"><span></span><span></span><span></span></div><div class="ms-btn" style="background:#c9a84c;border-radius:0"></div></div>
+            <div class="ms-hero" style="background:linear-gradient(160deg,#0a0f0d 0%,#141e1a 60%,#080d0b 100%)">
+              <div class="ms-tag" style="border-color:#c9a84c40;color:#c9a84c80">Luxury Property Group</div>
+              <div class="ms-h1" style="font-family:serif">Premium<br/>Properties<br/><em style="color:#c9a84c">Curated.</em></div>
+              <div class="ms-search-bar"><div class="ms-search-inner"><span style="color:#c9a84c30;font-size:5px">Search properties…</span><div style="width:16px;height:8px;background:#c9a84c;border-radius:1px"></div></div></div>
+            </div>
+            <div class="ms-prop-grid">
+              <div class="ms-prop-card"><div class="ms-prop-img" style="background:linear-gradient(135deg,#1a2820,#0a1510)"></div><div class="ms-prop-info"><div class="ms-prop-price" style="color:#c9a84c">$2.4M</div><div class="ms-prop-name">Harborview Estate</div></div></div>
+              <div class="ms-prop-card"><div class="ms-prop-img" style="background:linear-gradient(135deg,#0d1a14,#1a2820)"></div><div class="ms-prop-info"><div class="ms-prop-price" style="color:#c9a84c">$1.8M</div><div class="ms-prop-name">The Meridian</div></div></div>
+              <div class="ms-prop-card"><div class="ms-prop-img" style="background:linear-gradient(135deg,#141e1a,#0d1a14)"></div><div class="ms-prop-info"><div class="ms-prop-price" style="color:#c9a84c">$3.1M</div><div class="ms-prop-name">Skyline Penthouse</div></div></div>
+            </div>
+            <div class="ms-footer" style="background:#060a08;border-top:1px solid #c9a84c10"><span style="color:#c9a84c30">© 2024 Luminary</span><span style="color:#c9a84c40">View All</span></div>
+          </div>
+          <div class="port-shine"></div>
+        </div>
+        <div class="port-info">
+          <div>
+            <h3>Luminary Estates</h3>
+            <p>Luxury real estate with property listings, virtual tours and lead capture.</p>
+          </div>
+          <div class="port-tags"><span>Real Estate</span><span>Listings</span><span>Luxury</span></div>
+        </div>
+      </div>
+
+      <!-- Card 5: Nexus SaaS -->
+      <div class="port-card" data-tilt data-reveal="fade-up" data-delay="80">
+        <div class="port-preview">
+          <div class="mini-site nexus-site full-preview">
+            <div class="ms-nav" style="background:#07051a;border-bottom:1px solid #7c3aed30"><div class="ms-logo" style="color:#fff;font-family:sans-serif;font-weight:700;font-size:7px">NEXUS</div><div class="ms-links"><span style="background:#ffffff40"></span><span style="background:#ffffff40"></span><span style="background:#ffffff40"></span></div><div class="ms-btn" style="background:linear-gradient(135deg,#7c3aed,#4f46e5)"></div></div>
+            <div class="ms-hero" style="background:linear-gradient(160deg,#07051a 0%,#0f0a2e 50%,#07051a 100%);position:relative;overflow:hidden">
+              <div style="position:absolute;top:-10px;right:-10px;width:60px;height:60px;background:radial-gradient(circle,#7c3aed30,transparent 70%);border-radius:50%"></div>
+              <div class="ms-tag" style="border-color:#7c3aed60;color:#a78bfa">AI-Powered Platform</div>
+              <div class="ms-h1" style="font-family:sans-serif;font-weight:700;background:linear-gradient(135deg,#fff 30%,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Ship<br/>Faster.<br/>Scale More.</div>
+              <div class="ms-cta-row"><div class="ms-btn-g" style="background:linear-gradient(135deg,#7c3aed,#4f46e5)"></div><div class="ms-btn-o" style="border-color:#7c3aed40"></div></div>
+            </div>
+            <div class="ms-features">
+              <div class="ms-feat"><div class="ms-feat-icon" style="color:#a78bfa">◈</div><div class="ms-feat-t">Analytics</div></div>
+              <div class="ms-feat"><div class="ms-feat-icon" style="color:#a78bfa">⚡</div><div class="ms-feat-t">Automation</div></div>
+              <div class="ms-feat"><div class="ms-feat-icon" style="color:#a78bfa">◎</div><div class="ms-feat-t">Integrations</div></div>
+              <div class="ms-feat"><div class="ms-feat-icon" style="color:#a78bfa">✦</div><div class="ms-feat-t">Security</div></div>
+            </div>
+            <div class="ms-dash-preview" style="background:#0a0820;border:1px solid #7c3aed20;margin:0 8px 0;border-radius:2px">
+              <div style="display:flex;gap:4px;padding:4px 6px;border-bottom:1px solid #7c3aed15">
+                <div style="height:3px;width:20px;background:#7c3aed40;border-radius:1px"></div>
+                <div style="height:3px;width:14px;background:#7c3aed30;border-radius:1px"></div>
+              </div>
+              <div style="display:flex;gap:3px;padding:4px 6px">
+                <div style="flex:1;height:16px;background:linear-gradient(to top,#7c3aed30,transparent);border-radius:1px"></div>
+                <div style="flex:1;height:10px;background:linear-gradient(to top,#4f46e530,transparent);border-radius:1px;margin-top:6px"></div>
+                <div style="flex:1;height:18px;background:linear-gradient(to top,#7c3aed40,transparent);border-radius:1px;margin-top:auto"></div>
+                <div style="flex:1;height:12px;background:linear-gradient(to top,#4f46e525,transparent);border-radius:1px;margin-top:4px"></div>
+                <div style="flex:1;height:20px;background:linear-gradient(to top,#7c3aed50,transparent);border-radius:1px"></div>
+              </div>
+            </div>
+            <div class="ms-footer" style="background:#05040f;border-top:1px solid #7c3aed15"><span style="color:#7c3aed50">© 2024 Nexus</span><span style="color:#a78bfa80">Try Free</span></div>
+          </div>
+          <div class="port-shine"></div>
+        </div>
+        <div class="port-info">
+          <div>
+            <h3>Nexus Platform</h3>
+            <p>SaaS product site with animated feature sections, pricing table and dashboard preview.</p>
+          </div>
+          <div class="port-tags"><span>SaaS</span><span>Tech</span><span>Dashboard</span></div>
+        </div>
+      </div>
+
+      <!-- Card 6: Bloom Studio -->
+      <div class="port-card" data-tilt data-reveal="fade-up" data-delay="160">
+        <div class="port-preview">
+          <div class="mini-site bloom-site full-preview">
+            <div class="ms-nav" style="background:#0d0509;border-bottom:1px solid #e8a0b430"><div class="ms-logo" style="color:#f5e6ea;font-family:serif;font-style:italic;font-size:8px">Bloom Studio</div><div class="ms-links"><span style="background:#f5e6ea40"></span><span style="background:#f5e6ea40"></span><span style="background:#f5e6ea40"></span></div><div class="ms-btn" style="background:#d4607a"></div></div>
+            <div class="ms-hero" style="background:linear-gradient(160deg,#1a0a0f 0%,#2d1018 60%,#0d0509 100%)">
+              <div class="ms-tag" style="border-color:#d4607a50;color:#e8a0b4">Premium Beauty Studio</div>
+              <div class="ms-h1" style="font-family:serif;color:#f5e6ea">Glow<br/>Differently.<br/><em style="color:#d4607a">Always.</em></div>
+              <div class="ms-cta-row"><div class="ms-btn-g" style="background:#d4607a"></div><div class="ms-btn-o" style="border-color:#d4607a40"></div></div>
+            </div>
+            <div class="ms-bar" style="background:#d4607a08;border-top:1px solid #d4607a20"><span style="color:#d4607a70;font-size:5px;letter-spacing:.8px">SKINCARE · HAIR · NAILS · WELLNESS</span></div>
+            <div class="ms-services-row">
+              <div class="ms-svc" style="background:#1a0a0f;border:1px solid #d4607a20"><div class="ms-svc-icon" style="color:#d4607a">✿</div><div class="ms-svc-name">Facial</div></div>
+              <div class="ms-svc" style="background:#1a0a0f;border:1px solid #d4607a20"><div class="ms-svc-icon" style="color:#d4607a">◎</div><div class="ms-svc-name">Hair</div></div>
+              <div class="ms-svc" style="background:#1a0a0f;border:1px solid #d4607a20"><div class="ms-svc-icon" style="color:#d4607a">✦</div><div class="ms-svc-name">Nails</div></div>
+              <div class="ms-svc" style="background:#1a0a0f;border:1px solid #d4607a20"><div class="ms-svc-icon" style="color:#d4607a">◈</div><div class="ms-svc-name">Spa</div></div>
+            </div>
+            <div class="ms-footer" style="background:#080306;border-top:1px solid #d4607a10"><span style="color:#d4607a30">© 2024 Bloom</span><span style="color:#d4607a50">Book Now</span></div>
+          </div>
+          <div class="port-shine"></div>
+        </div>
+        <div class="port-info">
+          <div>
+            <h3>Bloom Studio</h3>
+            <p>Elegant beauty brand with service menus, online booking and gift card sales.</p>
+          </div>
+          <div class="port-tags"><span>Beauty</span><span>Booking</span><span>E-Commerce</span></div>
+        </div>
+      </div>
+
+    </div><!-- /portfolio-grid -->
+  </section>
+
+  <!-- ═══════════════════════════════ SERVICES ═════════════════════════════════ -->
+  <section class="services-section" id="services">
+    <div class="container">
+      <div class="section-label" data-reveal="fade-up"><span class="lline"></span><span>What We Do</span></div>
+      <h2 class="section-heading" data-reveal="fade-up" data-delay="80">Everything you need<br/><em>to own your space online.</em></h2>
+    </div>
+    <div class="svc-list">
+      <div class="svc-item" data-reveal="fade-up"><div class="svc-num">01</div><div class="svc-body"><h3>Custom Website Design</h3><p>Every pixel is intentional. We design from a blank canvas — your brand, your vision. No Squarespace. No Wix. The real thing.</p></div><div class="svc-arrow">→</div></div>
+      <div class="svc-item" data-reveal="fade-up" data-delay="60"><div class="svc-num">02</div><div class="svc-body"><h3>Performance-First Development</h3><p>Sub-2s load times, 95+ Lighthouse scores, bulletproof mobile layouts that rank and convert.</p></div><div class="svc-arrow">→</div></div>
+      <div class="svc-item" data-reveal="fade-up" data-delay="120"><div class="svc-num">03</div><div class="svc-body"><h3>SEO &amp; Conversion Copywriting</h3><p>Headlines that hook, copy that sells. Schema, meta strategy, and keyword architecture built into the foundation.</p></div><div class="svc-arrow">→</div></div>
+      <div class="svc-item" data-reveal="fade-up" data-delay="180"><div class="svc-num">04</div><div class="svc-body"><h3>Payment &amp; E-Commerce Integration</h3><p>Stripe, PayPal, Shopify — we wire up whatever your business needs to take money online, cleanly and securely.</p></div><div class="svc-arrow">→</div></div>
+      <div class="svc-item" data-reveal="fade-up" data-delay="240"><div class="svc-num">05</div><div class="svc-body"><h3>Managed Hosting &amp; Maintenance</h3><p>Premium servers, daily backups, SSL, uptime monitoring. Your site stays fast, secure, and live — always.</p></div><div class="svc-arrow">→</div></div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════ PRICING ═════════════════════════════════ -->
+  <section class="pricing-section" id="pricing">
+    <div class="container">
+      <div class="section-label" data-reveal="fade-up"><span class="lline"></span><span>Investment</span></div>
+      <h2 class="section-heading" data-reveal="fade-up" data-delay="80">Simple, honest<br/><em>pricing.</em></h2>
+      <p class="section-sub" data-reveal="fade-up" data-delay="160">One price for the build. Choose how you want your maintenance billed.</p>
+
+      <!-- Toggle -->
+      <div class="billing-toggle" data-reveal="fade-up" data-delay="240">
+        <span class="bt-label" id="bt-monthly-label" data-active="true">Monthly</span>
+        <button class="bt-switch" id="billingSwitch" aria-label="Toggle billing period">
+          <span class="bt-thumb"></span>
+        </button>
+        <span class="bt-label" id="bt-annual-label">Annual <em class="save-badge">Save $60/yr</em></span>
+        <!-- annual saves (34.99-29.99)*12 = $60 -->
+      </div>
+
+      <div class="pricing-cards" data-reveal="fade-up" data-delay="320">
+
+        <!-- Plan: Monthly / Annual -->
+        <div class="price-card" id="card-monthly">
+          <div class="pc-top">
+            <div class="pc-badge">Most Popular</div>
+            <h3 class="pc-name">Complete Package</h3>
+            <p class="pc-desc">Everything you need to launch and maintain a world-class website.</p>
+          </div>
+          <div class="pc-price-block">
+            <div class="pc-price"><span class="pc-cur">$</span><span class="pc-amt">499</span><span class="pc-cent">.99</span></div>
+            <div class="pc-price-label">one-time website build</div>
+            <div class="pc-plus">+</div>
+            <div class="pc-sub-price"><span class="pc-sub-amt" id="monthly-sub-price">$34.99</span><span class="pc-sub-per">/month</span></div>
+            <div class="pc-sub-label" id="monthly-sub-label">monthly maintenance</div>
+          </div>
+          <ul class="pc-features">
+            <li><span class="cf">✦</span>Custom design from scratch</li>
+            <li><span class="cf">✦</span>Up to 5 pages</li>
+            <li><span class="cf">✦</span>Mobile responsive &amp; SEO ready</li>
+            <li><span class="cf">✦</span>Contact form &amp; integrations</li>
+            <li><span class="cf">✦</span>2 rounds of revisions</li>
+            <li><span class="cf">✦</span>Premium managed hosting</li>
+            <li><span class="cf">✦</span>SSL + daily backups</li>
+            <li><span class="cf">✦</span>Monthly maintenance &amp; updates</li>
+            <li><span class="cf">✦</span>Uptime monitoring</li>
+            <li><span class="cf">✦</span>Priority support</li>
+          </ul>
+          <a href="#contact" class="btn-gold btn-full">Get Started →</a>
+        </div>
+
+        <!-- Plan: Build Only -->
+        <div class="price-card price-card-ghost">
+          <div class="pc-top">
+            <div class="pc-badge pc-badge-ghost">One-Time</div>
+            <h3 class="pc-name">Build Only</h3>
+            <p class="pc-desc">Get a stunning custom website with no ongoing commitment.</p>
+          </div>
+          <div class="pc-price-block">
+            <div class="pc-price"><span class="pc-cur">$</span><span class="pc-amt">499</span><span class="pc-cent">.99</span></div>
+            <div class="pc-price-label">one-time payment</div>
+            <div class="pc-plus" style="opacity:0">+</div>
+            <div class="pc-sub-price"><span class="pc-sub-amt" style="color:var(--muted)">No</span><span class="pc-sub-per" style="color:var(--muted)"> subscription</span></div>
+            <div class="pc-sub-label">hosting not included</div>
+          </div>
+          <ul class="pc-features">
+            <li><span class="cf">✦</span>Custom design from scratch</li>
+            <li><span class="cf">✦</span>Up to 5 pages</li>
+            <li><span class="cf">✦</span>Mobile responsive &amp; SEO ready</li>
+            <li><span class="cf">✦</span>Contact form &amp; integrations</li>
+            <li><span class="cf">✦</span>2 rounds of revisions</li>
+            <li><span class="cf cf-off">—</span><span style="color:var(--muted)">Hosting not included</span></li>
+            <li><span class="cf cf-off">—</span><span style="color:var(--muted)">Maintenance not included</span></li>
+            <li><span class="cf cf-off">—</span><span style="color:var(--muted)">No uptime monitoring</span></li>
+            <li><span class="cf cf-off">—</span><span style="color:var(--muted)">Standard support</span></li>
+          </ul>
+          <a href="#contact" class="btn-outline btn-full">Choose Plan</a>
+        </div>
+
+      </div><!-- /pricing-cards -->
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════ TESTIMONIALS ═══════════════════════════════ -->
+  <section class="testi-section">
+    <div class="container">
+      <div class="section-label" data-reveal="fade-up"><span class="lline"></span><span>Client Stories</span></div>
+      <div class="testi-wrap">
+        <div class="testi active" id="t0">
+          <blockquote data-reveal="fade-up">"Forge Digital tripled our inbound leads in 90 days. The site doesn't just look incredible — it actually works. Best investment we've made."</blockquote>
+          <div class="testi-client" data-reveal="fade-up" data-delay="100"><div class="tc-av">S</div><div><strong>Sarah Mitchell</strong><span>CEO, Pinnacle Consulting</span></div></div>
+        </div>
+        <div class="testi" id="t1">
+          <blockquote>"From discovery call to live in nine days. The process was seamless and the result exceeded every expectation I had going in."</blockquote>
+          <div class="testi-client"><div class="tc-av">J</div><div><strong>James Okafor</strong><span>Founder, OakLaw Group</span></div></div>
+        </div>
+        <div class="testi" id="t2">
+          <blockquote>"Worth every dollar. The monthly plan means I never think about my website — it just runs. And when I need something, they respond same day."</blockquote>
+          <div class="testi-client"><div class="tc-av">L</div><div><strong>Lauren Park</strong><span>Owner, Luminary Spa</span></div></div>
+        </div>
+        <div class="testi-nav">
+          <button class="tn-btn active" data-i="0"></button>
+          <button class="tn-btn" data-i="1"></button>
+          <button class="tn-btn" data-i="2"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CONTACT ══════════════════════════════════ -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Left: info + trust -->
+        <div class="contact-left" data-reveal="fade-up">
+          <div class="section-label"><span class="lline"></span><span>Get Started</span></div>
+          <h2 class="section-heading">Ready to build<br/><em>something great?</em></h2>
+          <p class="contact-desc">Fill out the form and we'll get back to you within 24 hours with a custom payment link and everything you need to kick off your project.</p>
+
+          <div class="contact-info-list">
+            <div class="ci-item">
+              <span class="ci-label">Email</span>
+              <a href="mailto:hello@forgedigital.com" class="ci-val">hello@forgedigital.com</a>
+            </div>
+            <div class="ci-item">
+              <span class="ci-label">TikTok</span>
+              <a href="https://tiktok.com/@forgedigital" target="_blank" rel="noopener" class="ci-val">@forgedigital</a>
+            </div>
+            <div class="ci-item">
+              <span class="ci-label">Hours</span>
+              <span class="ci-val">Mon–Fri · 9am–6pm EST</span>
+            </div>
+            <div class="ci-item">
+              <span class="ci-label">Response</span>
+              <span class="ci-val">Within 24 hours</span>
+            </div>
+          </div>
+
+          <div class="contact-trust">
+            <div class="ct-row"><span class="ct-icon">🔒</span><span>Secure &amp; Confidential</span></div>
+            <div class="ct-row"><span class="ct-icon">⚡</span><span>Payment link sent after review — no pressure</span></div>
+            <div class="ct-row"><span class="ct-icon">✦</span><span>No commitment until you're ready to proceed</span></div>
+          </div>
+        </div>
+
+        <!-- Right: contact form -->
+        <div class="contact-right" data-reveal="fade-up" data-delay="150">
+          <div class="contact-form-card">
+            <form id="contactForm" autocomplete="on">
+              <div class="field-row">
+                <div class="field">
+                  <label>Full Name <span class="req">*</span></label>
+                  <input type="text" name="name" id="cfName" placeholder="Jane Smith" autocomplete="name" required/>
+                </div>
+                <div class="field">
+                  <label>Email <span class="req">*</span></label>
+                  <input type="email" name="email" id="cfEmail" placeholder="jane@company.com" autocomplete="email" required/>
+                </div>
+              </div>
+              <div class="field-row">
+                <div class="field">
+                  <label>Business Name <span class="opt">(optional)</span></label>
+                  <input type="text" name="business" id="cfBusiness" placeholder="Acme Co." autocomplete="organization"/>
+                </div>
+                <div class="field">
+                  <label>Phone <span class="opt">(optional)</span></label>
+                  <input type="tel" name="phone" id="cfPhone" placeholder="+1 (555) 000-0000" autocomplete="tel"/>
+                </div>
+              </div>
+              <div class="field">
+                <label>Which plan interests you?</label>
+                <select name="plan" id="cfPlan">
+                  <option value="">Select a plan…</option>
+                  <option value="monthly">Complete Package — $499.99 + $34.99/mo</option>
+                  <option value="annual">Complete Package Annual — $499.99 + $29.99/mo</option>
+                  <option value="build-only">Build Only — $499.99 (no maintenance)</option>
+                  <option value="unsure">Not sure yet — help me decide</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Tell us about your project <span class="opt">(optional)</span></label>
+                <textarea name="message" id="cfMessage" rows="4" placeholder="What does your business do? Any features or pages you need?"></textarea>
+              </div>
+              <p class="cf-note">We'll review your request and send a personalised payment link within 24 hours.</p>
+              <button type="submit" class="submit-btn" id="cfSubmit">
+                <span id="cfBtnText">Send My Request →</span>
+                <span id="cfBtnLoading" class="hidden">Sending…</span>
+              </button>
+              <p id="cfError" class="field-err"></p>
+            </form>
+
+            <div id="contactSuccess" class="contact-success hidden">
+              <div class="cs-icon">
+                <svg viewBox="0 0 52 52" fill="none" width="56"><circle cx="26" cy="26" r="25" stroke="#C9A84C" stroke-width="1.5"/><path class="ck-path" d="M14 26l8 8 16-16" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <h3>Message Received!</h3>
+              <p>We'll review your project and send you a <strong>personalised payment link</strong> within 24 hours.</p>
+              <p class="cs-sub">Confirmation sent to <strong id="csEmail"></strong></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <a href="#" class="logo footer-logo"><svg viewBox="0 0 32 32" fill="none" class="logo-svg" width="22"><path d="M16 2L29 9.5V22.5L16 30L3 22.5V9.5L16 2Z" stroke="#C9A84C" stroke-width="1.2"/></svg><span>Forge<em>Digital</em></span></a>
+        <p class="footer-tag"><em>We build websites that make money.</em></p>
+        <div class="footer-socials">
+          <a href="https://tiktok.com/@forgedigital" target="_blank" rel="noopener" class="fsoc">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.77a4.85 4.85 0 01-1.01-.08z"/></svg>
+            @forgedigital
+          </a>
+          <a href="mailto:hello@forgedigital.com" class="fsoc">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="16" height="16"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            hello@forgedigital.com
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Forge Digital. All rights reserved.</span>
+        <div class="fl"><a href="#">Privacy</a><a href="#">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
