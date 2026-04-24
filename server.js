@@ -18,28 +18,45 @@ app.post('/contact', async (req, res) => {
     return res.status(400).json({ error: 'Name and email are required.' });
   }
 
-  // Send email notification
+  // Send emails
   try {
-    await resend.emails.send({
-      from: 'Forge Digital <onboarding@resend.dev>',
-      to:   'hello@forgedigital.us.com',
-      reply_to: email,
-      subject: `New enquiry from ${name}${plan ? ` — ${plan}` : ''}`,
-      html: `
-        <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:8px;">
-          <h2 style="margin:0 0 20px;font-size:20px;color:#111;">New Contact Form Submission</h2>
-          <table style="width:100%;border-collapse:collapse;font-size:14px;">
-            <tr><td style="padding:8px 0;color:#6b7280;width:100px;">Name</td><td style="padding:8px 0;font-weight:600;">${name}</td></tr>
-            <tr><td style="padding:8px 0;color:#6b7280;">Email</td><td style="padding:8px 0;"><a href="mailto:${email}" style="color:#b8972a;">${email}</a></td></tr>
-            ${business ? `<tr><td style="padding:8px 0;color:#6b7280;">Business</td><td style="padding:8px 0;">${business}</td></tr>` : ''}
-            ${phone    ? `<tr><td style="padding:8px 0;color:#6b7280;">Phone</td><td style="padding:8px 0;">${phone}</td></tr>` : ''}
-            ${plan     ? `<tr><td style="padding:8px 0;color:#6b7280;">Plan</td><td style="padding:8px 0;">${plan}</td></tr>` : ''}
-            ${message  ? `<tr><td style="padding:8px 0;color:#6b7280;vertical-align:top;">Message</td><td style="padding:8px 0;">${message}</td></tr>` : ''}
-          </table>
-          <p style="margin:20px 0 0;font-size:12px;color:#9ca3af;">Hit reply to respond directly to ${name}.</p>
-        </div>
-      `,
-    });
+    await Promise.all([
+      // 1. Notification to you
+      resend.emails.send({
+        from: 'Forge Digital <hello@forgedigital.us.com>',
+        to:   'hello@forgedigital.us.com',
+        reply_to: email,
+        subject: `New enquiry from ${name}${plan ? ` — ${plan}` : ''}`,
+        html: `
+          <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;border:1px solid #e5e7eb;border-radius:8px;">
+            <h2 style="margin:0 0 20px;font-size:20px;color:#111;">New Contact Form Submission</h2>
+            <table style="width:100%;border-collapse:collapse;font-size:14px;">
+              <tr><td style="padding:8px 0;color:#6b7280;width:100px;">Name</td><td style="padding:8px 0;font-weight:600;">${name}</td></tr>
+              <tr><td style="padding:8px 0;color:#6b7280;">Email</td><td style="padding:8px 0;"><a href="mailto:${email}" style="color:#b8972a;">${email}</a></td></tr>
+              ${business ? `<tr><td style="padding:8px 0;color:#6b7280;">Business</td><td style="padding:8px 0;">${business}</td></tr>` : ''}
+              ${phone    ? `<tr><td style="padding:8px 0;color:#6b7280;">Phone</td><td style="padding:8px 0;">${phone}</td></tr>` : ''}
+              ${plan     ? `<tr><td style="padding:8px 0;color:#6b7280;">Plan</td><td style="padding:8px 0;">${plan}</td></tr>` : ''}
+              ${message  ? `<tr><td style="padding:8px 0;color:#6b7280;vertical-align:top;">Message</td><td style="padding:8px 0;">${message}</td></tr>` : ''}
+            </table>
+            <p style="margin:20px 0 0;font-size:12px;color:#9ca3af;">Hit reply to respond directly to ${name}.</p>
+          </div>
+        `,
+      }),
+      // 2. Confirmation to the person who filled out the form
+      resend.emails.send({
+        from: 'Forge Digital <hello@forgedigital.us.com>',
+        to:   email,
+        subject: `We received your message, ${name.split(' ')[0]} ✦`,
+        html: `
+          <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:24px;">
+            <h2 style="margin:0 0 16px;font-size:20px;color:#111;">Thanks for reaching out.</h2>
+            <p style="color:#444;line-height:1.6;margin:0 0 16px;">Hey ${name.split(' ')[0]}, we've received your message and will get back to you within 24 hours with next steps.</p>
+            <p style="color:#444;line-height:1.6;margin:0 0 24px;">In the meantime, feel free to check out our work or follow us on TikTok <a href="https://tiktok.com/@forgedigital" style="color:#b8972a;">@forgedigital</a>.</p>
+            <p style="color:#444;line-height:1.6;margin:0;">— Abdallah<br><span style="color:#6b7280;font-size:13px;">Forge Digital</span></p>
+          </div>
+        `,
+      }),
+    ]);
   } catch (err) {
     console.error('Resend error:', err);
   }
