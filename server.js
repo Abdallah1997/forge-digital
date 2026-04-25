@@ -27,16 +27,13 @@ app.post('/api/create-checkout-session', async (req, res) => {
 
     if (plan === 'complete') {
       // $499.99 one-time setup fee + $34.99/month recurring
+      // Both prices go in line_items — Stripe bills the one-time price on the first invoice
       session = await stripe.checkout.sessions.create({
         mode: 'subscription',
         line_items: [
-          { price: PRICES.monthly, quantity: 1 },
+          { price: PRICES.buildOnce, quantity: 1 },
+          { price: PRICES.monthly,   quantity: 1 },
         ],
-        subscription_data: {
-          add_invoice_items: [
-            { price: PRICES.buildOnce, quantity: 1 },
-          ],
-        },
         success_url: `${DOMAIN}/success.html?session_id={CHECKOUT_SESSION_ID}&plan=complete`,
         cancel_url:  `${DOMAIN}/#pricing`,
       });
