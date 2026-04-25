@@ -100,105 +100,49 @@ const $$ = (s, c=document) => [...c.querySelectorAll(s)];
   });
 })();
 
-/* ── Testimonial Slider ────────────────────────────────────── */
+/* ── Stripe Checkout ───────────────────────────────────────── */
 (function(){
-  const btns=$$('.tn-btn'), slides=$$('.testi');
+  const btns = $$('.checkout-btn');
+  const errEl = $('#checkoutError');
   if(!btns.length) return;
-  let cur=0, timer;
-  function show(i){
-    slides[cur].classList.remove('active');
-    btns[cur].classList.remove('active');
-    cur=i;
-    slides[cur].classList.add('active');
-    btns[cur].classList.add('active');
-  }
-  function auto(){ timer=setInterval(()=>show((cur+1)%slides.length),5500); }
-  btns.forEach(b=>b.addEventListener('click',()=>{ clearInterval(timer); show(+b.dataset.i); auto(); }));
-  auto();
-})();
 
-/* ── Pricing Toggle (Annual/Monthly display) ───────────────── */
-(function(){
-  const sw=$('#billingSwitch');
-  const mlabel=$('#bt-monthly-label');
-  const alabel=$('#bt-annual-label');
-  const subPrice=$('#monthly-sub-price');
-  const subLabel=$('#monthly-sub-label');
-  if(!sw) return;
+  btns.forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const plan = btn.dataset.plan;
 
-  let isAnnual=false;
+      // Loading state
+      btn.disabled = true;
+      const txtEl  = btn.querySelector('.btn-text');
+      const loadEl = btn.querySelector('.btn-loading');
+      if(txtEl)  txtEl.classList.add('hidden');
+      if(loadEl) loadEl.classList.remove('hidden');
+      if(errEl)  errEl.classList.add('hidden');
 
-  function update(){
-    sw.classList.toggle('annual',isAnnual);
-    if(mlabel) mlabel.dataset.active=String(!isAnnual);
-    if(alabel) alabel.dataset.active=String(isAnnual);
-    if(subPrice) subPrice.textContent = isAnnual ? '$29.99' : '$34.99';
-    if(subLabel) subLabel.textContent = isAnnual ? 'annual maintenance (billed yearly)' : 'monthly maintenance';
-  }
+      try {
+        const res = await fetch('/api/create-checkout-session', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ plan }),
+        });
 
-  sw.addEventListener('click',()=>{ isAnnual=!isAnnual; update(); });
-  if(alabel) alabel.addEventListener('click',()=>{ isAnnual=true; update(); });
-  if(mlabel) mlabel.addEventListener('click',()=>{ isAnnual=false; update(); });
-})();
+        const data = await res.json();
 
-/* ── Contact Form ──────────────────────────────────────────── */
-(function(){
-  const form=$('#contactForm');
-  if(!form) return;
+        if(!res.ok || !data.url) {
+          throw new Error(data.error || 'Could not start checkout. Please try again.');
+        }
 
-  form.addEventListener('submit', async e=>{
-    e.preventDefault();
-    const name=$('#cfName')?.value.trim();
-    const email=$('#cfEmail')?.value.trim();
-    if(!name||!email){
-      $('#cfError').textContent='Please enter your name and email.';
-      return;
-    }
-    $('#cfError').textContent='';
+        // Redirect to Stripe Checkout
+        window.location.href = data.url;
 
-    // Loading state
-    const btn=$('#cfSubmit');
-    btn.disabled=true;
-    $('#cfBtnText')?.classList.add('hidden');
-    $('#cfBtnLoading')?.classList.remove('hidden');
-
-    try {
-      const payload={
-        name,
-        email,
-        business:$('#cfBusiness')?.value.trim()||'',
-        phone:$('#cfPhone')?.value.trim()||'',
-        plan:$('#cfPlan')?.value||'',
-        message:$('#cfMessage')?.value.trim()||'',
-      };
-
-      // Send to server
-      const res = await fetch('/contact', {
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body: JSON.stringify(payload),
-      });
-
-      if(!res.ok) throw new Error('Server error');
-
-      // Success
-      form.classList.add('hidden');
-      const successEl=$('#contactSuccess');
-      if(successEl) successEl.classList.remove('hidden');
-      const csEmail=$('#csEmail');
-      if(csEmail) csEmail.textContent=email;
-
-    } catch(err) {
-      // Graceful fallback — show success anyway (form is informational)
-      form.classList.add('hidden');
-      const successEl=$('#contactSuccess');
-      if(successEl) successEl.classList.remove('hidden');
-      const csEmail=$('#csEmail');
-      if(csEmail) csEmail.textContent=email;
-    } finally {
-      btn.disabled=false;
-      $('#cfBtnText')?.classList.remove('hidden');
-      $('#cfBtnLoading')?.classList.add('hidden');
-    }
+      } catch(err) {
+        if(errEl) {
+          errEl.textContent = err.message || 'Something went wrong. Please refresh and try again.';
+          errEl.classList.remove('hidden');
+        }
+        btn.disabled = false;
+        if(txtEl)  txtEl.classList.remove('hidden');
+        if(loadEl) loadEl.classList.add('hidden');
+      }
+    });
   });
 })();
