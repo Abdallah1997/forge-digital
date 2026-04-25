@@ -7,7 +7,7 @@
   <meta name="description" content="Custom websites built specifically for pressure washing businesses. Get more jobs online. $499.99 flat — delivered in 7 days."/>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Nunito+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="/css/style.css"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
@@ -15,30 +15,32 @@
 <body>
 
   <!-- CURSOR -->
-  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
 
   <!-- NAV -->
-  <nav class="nav" id="nav">
+  <nav class="nav" id="nav" aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="#" class="logo">
+      <a href="#" class="logo" aria-label="Forge Digital — Home">
         <div class="logo-hex-wrap">
-          <svg viewBox="0 0 32 32" fill="none" class="logo-svg"><path d="M16 2L29 9.5V22.5L16 30L3 22.5V9.5L16 2Z" stroke="#0EA5E9" stroke-width="1.2"/><path d="M16 8L23.5 12.5V21.5L16 26L8.5 21.5V12.5L16 8Z" stroke="#0EA5E9" stroke-width="0.5" stroke-dasharray="2 2"/></svg>
+          <svg viewBox="0 0 32 32" fill="none" class="logo-svg" aria-hidden="true"><path d="M16 2L29 9.5V22.5L16 30L3 22.5V9.5L16 2Z" stroke="#EA580C" stroke-width="1.2"/><path d="M16 8L23.5 12.5V21.5L16 26L8.5 21.5V12.5L16 8Z" stroke="#EA580C" stroke-width="0.5" stroke-dasharray="2 2"/></svg>
         </div>
         <span>Forge<em>Digital</em></span>
       </a>
-      <ul class="nav-links">
+      <ul class="nav-links" role="list">
         <li><a href="#portfolio">Examples</a></li>
         <li><a href="#services">What You Get</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
         <li><a href="#pricing">Pricing</a></li>
       </ul>
       <a href="#pricing" class="nav-cta">Order Now</a>
-      <button class="hamburger" id="hamburger"><span></span><span></span></button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">
+        <span></span><span></span>
+      </button>
     </div>
   </nav>
 
   <!-- MOBILE DRAWER -->
-  <div class="drawer" id="drawer">
+  <nav class="drawer" id="drawer" aria-label="Mobile navigation" aria-hidden="true">
     <div class="drawer-links">
       <a href="#portfolio" class="drawer-link">Examples</a>
       <a href="#services" class="drawer-link">What You Get</a>
@@ -48,117 +50,158 @@
     </div>
     <div class="drawer-foot">
       <span>hello@forgedigital.us.com</span>
-      <span>@forgedigital</span>
     </div>
-  </div>
-  <div class="drawer-overlay" id="drawerOverlay"></div>
+  </nav>
+  <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
 
   <!-- ══════════════════════════════════ HERO ══════════════════════════════════ -->
-  <section class="hero" id="hero">
+  <section class="hero" id="hero" aria-label="Hero">
 
-    <div class="parallax-layer">
+    <div class="parallax-layer" aria-hidden="true">
       <div class="orb orb-1"></div>
       <div class="orb orb-2"></div>
       <div class="orb orb-3"></div>
     </div>
-    <div class="parallax-layer">
+    <div class="parallax-layer" aria-hidden="true">
       <div class="geo-ring geo-1"></div>
       <div class="geo-ring geo-2"></div>
     </div>
-    <div class="hero-grid-bg"></div>
+    <div class="hero-grid-bg" aria-hidden="true"></div>
 
     <div class="hero-inner">
       <!-- Text column -->
       <div class="hero-text">
         <p class="hero-eyebrow" data-reveal="fade-up">Pressure Washing Websites</p>
-        <div class="hero-headline">
+        <div class="hero-headline" aria-label="We build pressure washing websites that get you booked.">
           <div class="h-line" style="--d:0ms"><span class="hw">We</span><span class="hw italic-w">build</span></div>
           <div class="h-line" style="--d:100ms"><span class="hw">pressure</span><span class="hw">washing</span></div>
           <div class="h-line" style="--d:200ms"><span class="hw">websites</span><span class="hw">that</span></div>
           <div class="h-line gold-line" style="--d:300ms"><span class="hw">get</span><span class="hw">you</span><span class="hw">booked.</span></div>
         </div>
         <p class="hero-sub" data-reveal="fade-up" data-delay="500">
-          Done in 7 days. No calls, no back-and-forth.<br/>Order online, fill a quick questionnaire — your site goes live.
+          Stop losing jobs to competitors with better-looking sites.<br/>
+          $499 flat. 10-min form. Live in 7 days — no calls required.
         </p>
         <div class="hero-actions" data-reveal="fade-up" data-delay="650">
           <a href="#pricing" class="btn-gold">Order Now — $499 →</a>
           <a href="#portfolio" class="btn-ghost-sm">See Examples</a>
         </div>
         <div class="hero-stats" data-reveal="fade-up" data-delay="800">
-          <div class="hs"><strong class="counter" data-target="7">0</strong><span>+</span><p>Sites Built</p></div>
+          <div class="hs"><strong class="counter" data-target="12">0</strong><span>+</span><p>Sites Built</p></div>
           <div class="hs-div"></div>
           <div class="hs"><strong class="counter" data-target="100">0</strong><span>%</span><p>Satisfaction</p></div>
           <div class="hs-div"></div>
           <div class="hs">
-            <div class="live-badge"><span class="live-dot"></span><span>Live</span></div>
+            <div class="live-badge"><span class="live-dot" aria-hidden="true"></span><span>Live</span></div>
             <p>Deployed</p>
           </div>
         </div>
       </div>
 
-      <!-- 3D Gem Visual -->
+      <!-- Browser Mockup Visual -->
       <div class="hero-3d-wrap" data-reveal="fade-up" data-delay="300">
-        <div class="forge-gem-scene">
-          <svg class="forge-gem-svg" viewBox="0 0 460 440" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <radialGradient id="gemGlow" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#0EA5E9" stop-opacity="0.22"/>
-                <stop offset="55%" stop-color="#0EA5E9" stop-opacity="0.07"/>
-                <stop offset="100%" stop-color="#0EA5E9" stop-opacity="0"/>
-              </radialGradient>
-              <radialGradient id="innerGlow" cx="50%" cy="50%" r="50%">
-                <stop offset="0%" stop-color="#0EA5E9" stop-opacity="0.9"/>
-                <stop offset="40%" stop-color="#0EA5E9" stop-opacity="0.5"/>
-                <stop offset="100%" stop-color="#0EA5E9" stop-opacity="0"/>
-              </radialGradient>
-              <filter id="fglow" x="-50%" y="-50%" width="200%" height="200%">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
-                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-              </filter>
-              <filter id="softBlur" x="-60%" y="-60%" width="220%" height="220%">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="14"/>
-              </filter>
-            </defs>
-            <circle cx="230" cy="210" r="190" fill="url(#gemGlow)"/>
-            <circle cx="230" cy="210" r="90" fill="#0EA5E9" fill-opacity="0.05" filter="url(#softBlur)"/>
-            <g>
-              <ellipse cx="230" cy="210" rx="200" ry="52" stroke="#0EA5E9" stroke-opacity="0.13" stroke-width="1" fill="none"/>
-              <circle cx="430" cy="210" r="4" fill="#0EA5E9" fill-opacity="0.7" filter="url(#fglow)"/>
-              <circle cx="30"  cy="210" r="2.5" fill="#0EA5E9" fill-opacity="0.35"/>
-              <animateTransform attributeName="transform" type="rotate" values="0 230 210;360 230 210" dur="22s" repeatCount="indefinite"/>
-            </g>
-            <g transform="rotate(-50 230 210)">
-              <ellipse cx="230" cy="210" rx="150" ry="40" stroke="#0EA5E9" stroke-opacity="0.2" stroke-width="1.2" fill="none"/>
-              <circle cx="380" cy="210" r="3.5" fill="#0EA5E9" fill-opacity="0.8" filter="url(#fglow)"/>
-              <animateTransform attributeName="transform" type="rotate" values="-50 230 210;310 230 210" dur="15s" repeatCount="indefinite"/>
-            </g>
-            <g transform="rotate(30 230 210)">
-              <ellipse cx="230" cy="210" rx="105" ry="28" stroke="#0EA5E9" stroke-opacity="0.28" stroke-width="1" fill="none"/>
-              <circle cx="335" cy="210" r="3" fill="#0EA5E9" fill-opacity="0.9" filter="url(#fglow)"/>
-              <animateTransform attributeName="transform" type="rotate" values="30 230 210;-330 230 210" dur="10s" repeatCount="indefinite"/>
-            </g>
-            <polygon points="230,105 325,158 325,264 230,317 135,264 135,158" fill="rgba(14,165,233,0.04)" stroke="#0EA5E9" stroke-opacity="0.3" stroke-width="0.8"/>
-            <polygon points="230,135 300,175 300,255 230,295 160,255 160,175" fill="rgba(14,165,233,0.055)" stroke="#0EA5E9" stroke-opacity="0.38" stroke-width="1"/>
-            <polygon points="230,162 277,189 277,243 230,270 183,243 183,189" fill="rgba(14,165,233,0.09)" stroke="#0EA5E9" stroke-opacity="0.52" stroke-width="1.2"/>
-            <polygon points="230,183 258,199 258,231 230,247 202,231 202,199" fill="rgba(14,165,233,0.16)" stroke="#0EA5E9" stroke-opacity="0.72" stroke-width="1.6"/>
-            <g stroke="#0EA5E9" stroke-opacity="0.07" stroke-width="0.6">
-              <line x1="230" y1="210" x2="230" y2="105"/>
-              <line x1="230" y1="210" x2="325" y2="158"/>
-              <line x1="230" y1="210" x2="325" y2="264"/>
-              <line x1="230" y1="210" x2="230" y2="317"/>
-              <line x1="230" y1="210" x2="135" y2="264"/>
-              <line x1="230" y1="210" x2="135" y2="158"/>
-            </g>
-            <polygon points="135,264 230,317 230,357 135,304" fill="rgba(14,165,233,0.03)" stroke="#0EA5E9" stroke-opacity="0.14" stroke-width="0.7"/>
-            <polygon points="325,264 230,317 230,357 325,304" fill="rgba(14,165,233,0.02)" stroke="#0EA5E9" stroke-opacity="0.1" stroke-width="0.7"/>
-            <circle cx="230" cy="210" r="34" fill="rgba(14,165,233,0.1)"/>
-            <circle cx="230" cy="210" r="20" fill="rgba(14,165,233,0.22)"/>
-            <circle cx="230" cy="210" r="10" fill="rgba(14,165,233,0.55)" filter="url(#fglow)">
-              <animate attributeName="r" values="10;13;10" dur="2.8s" repeatCount="indefinite"/>
-              <animate attributeName="fill-opacity" values="0.55;0.85;0.55" dur="2.8s" repeatCount="indefinite"/>
-            </circle>
-            <circle cx="230" cy="210" r="4.5" fill="#0EA5E9"/>
-          </svg>
+        <div class="hero-browser-scene">
+          <!-- Glow behind browser -->
+          <div class="hb-bg-glow" aria-hidden="true"></div>
+
+          <!-- Browser window -->
+          <div class="hero-browser" role="img" aria-label="Example pressure washing website preview">
+            <!-- Chrome bar -->
+            <div class="hb-chrome" aria-hidden="true">
+              <div class="hb-dots">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="hb-url">
+                <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                prowashco.com
+              </div>
+            </div>
+            <!-- Site preview inside browser -->
+            <div class="hb-content" aria-hidden="true">
+              <div style="background:#f8fafc;height:100%;font-family:system-ui,sans-serif;display:flex;flex-direction:column;overflow:hidden">
+                <!-- Nav -->
+                <div style="display:flex;align-items:center;justify-content:space-between;padding:6px 12px;background:#fff;border-bottom:1px solid #e2e8f0;flex-shrink:0">
+                  <div style="font-size:9px;font-weight:800;color:#0f172a">PRO<span style="color:#0ea5e9">WASH</span></div>
+                  <div style="display:flex;gap:5px;align-items:center">
+                    <span style="font-size:4px;color:#94a3b8">SERVICES</span>
+                    <span style="font-size:4px;color:#94a3b8">GALLERY</span>
+                    <div style="background:#0ea5e9;color:#fff;font-size:4px;font-weight:700;padding:3px 7px;border-radius:2px">FREE QUOTE</div>
+                  </div>
+                </div>
+                <!-- Hero -->
+                <div style="background:linear-gradient(150deg,#f0f9ff,#e0f2fe 60%,#f8fafc);padding:14px 14px 10px;position:relative;overflow:hidden;flex-shrink:0">
+                  <div style="position:absolute;right:-10px;top:-10px;width:90px;height:80px;background:#0ea5e9;opacity:.06;border-radius:50%;transform:scale(1.8)"></div>
+                  <div style="font-size:4.5px;letter-spacing:.8px;text-transform:uppercase;color:#0ea5e9;font-weight:700;margin-bottom:3px">📍 Serving Metro Atlanta &amp; Surrounding Areas</div>
+                  <div style="font-size:18px;font-weight:800;line-height:1.05;color:#0f172a;margin-bottom:4px">Your Property,<br><span style="color:#0ea5e9">Spotless.</span></div>
+                  <div style="font-size:4.5px;color:#475569;margin-bottom:7px;line-height:1.5;max-width:140px">Professional pressure washing for homes, driveways, decks &amp; commercial properties.</div>
+                  <div style="display:flex;gap:5px;align-items:center;margin-bottom:7px">
+                    <div style="background:#0ea5e9;color:#fff;font-size:5px;font-weight:700;padding:4px 10px;border-radius:3px;letter-spacing:.3px">GET FREE ESTIMATE →</div>
+                    <div style="border:1px solid #cbd5e1;font-size:4.5px;color:#64748b;padding:3px 7px;border-radius:3px">See Our Work</div>
+                  </div>
+                  <div style="display:flex;align-items:center;gap:3px">
+                    <span style="color:#f59e0b;font-size:9px">★★★★★</span>
+                    <span style="font-size:5px;color:#374151;font-weight:700">4.9</span>
+                    <span style="font-size:4px;color:#6b7280">(312 Google Reviews)</span>
+                  </div>
+                </div>
+                <!-- Services grid -->
+                <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#e2e8f0;border-bottom:1px solid #e2e8f0;flex-shrink:0">
+                  <div style="background:#fff;padding:7px 4px;text-align:center">
+                    <div style="font-size:13px">🏠</div>
+                    <div style="font-size:4.5px;color:#0f172a;font-weight:600;margin-top:2px">House Wash</div>
+                    <div style="font-size:3.5px;color:#94a3b8;margin-top:1px">from $199</div>
+                  </div>
+                  <div style="background:#fff;padding:7px 4px;text-align:center">
+                    <div style="font-size:13px">🚗</div>
+                    <div style="font-size:4.5px;color:#0f172a;font-weight:600;margin-top:2px">Driveway</div>
+                    <div style="font-size:3.5px;color:#94a3b8;margin-top:1px">from $99</div>
+                  </div>
+                  <div style="background:#fff;padding:7px 4px;text-align:center">
+                    <div style="font-size:13px">🏚️</div>
+                    <div style="font-size:4.5px;color:#0f172a;font-weight:600;margin-top:2px">Roof Wash</div>
+                    <div style="font-size:3.5px;color:#94a3b8;margin-top:1px">from $249</div>
+                  </div>
+                  <div style="background:#fff;padding:7px 4px;text-align:center">
+                    <div style="font-size:13px">🌿</div>
+                    <div style="font-size:4.5px;color:#0f172a;font-weight:600;margin-top:2px">Deck &amp; Patio</div>
+                    <div style="font-size:3.5px;color:#94a3b8;margin-top:1px">from $149</div>
+                  </div>
+                </div>
+                <!-- Trust bar -->
+                <div style="display:flex;justify-content:space-around;align-items:center;padding:7px 10px;background:#fff;border-bottom:1px solid #e2e8f0;flex-shrink:0">
+                  <div style="text-align:center">
+                    <div style="font-size:11px;font-weight:800;color:#0f172a">500+</div>
+                    <div style="font-size:3.5px;color:#64748b;letter-spacing:.3px;text-transform:uppercase">Jobs Done</div>
+                  </div>
+                  <div style="width:1px;height:20px;background:#e2e8f0"></div>
+                  <div style="display:flex;flex-direction:column;gap:2px">
+                    <div style="display:flex;align-items:center;gap:2px"><span style="font-size:6px;color:#16a34a">✓</span><span style="font-size:4.5px;color:#374151;font-weight:600">Licensed &amp; Insured</span></div>
+                    <div style="display:flex;align-items:center;gap:2px"><span style="font-size:6px;color:#16a34a">✓</span><span style="font-size:4.5px;color:#374151;font-weight:600">BBB Accredited</span></div>
+                  </div>
+                  <div style="width:1px;height:20px;background:#e2e8f0"></div>
+                  <div style="text-align:center">
+                    <div style="font-size:11px;font-weight:800;color:#0ea5e9">FREE</div>
+                    <div style="font-size:3.5px;color:#64748b;letter-spacing:.3px;text-transform:uppercase">Estimates</div>
+                  </div>
+                </div>
+                <!-- Quote form -->
+                <div style="padding:10px 14px;background:#f8fafc;flex:1">
+                  <div style="font-size:7.5px;font-weight:700;color:#0f172a;margin-bottom:6px">Get Your Free Estimate Today</div>
+                  <div style="display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-bottom:3px">
+                    <div style="background:#fff;border:1px solid #e2e8f0;border-radius:3px;height:13px;display:flex;align-items:center;padding:0 6px"><span style="font-size:4.5px;color:#94a3b8">Your Name</span></div>
+                    <div style="background:#fff;border:1px solid #e2e8f0;border-radius:3px;height:13px;display:flex;align-items:center;padding:0 6px"><span style="font-size:4.5px;color:#94a3b8">Phone Number</span></div>
+                  </div>
+                  <div style="background:#fff;border:1px solid #e2e8f0;border-radius:3px;height:13px;display:flex;align-items:center;padding:0 6px;margin-bottom:6px"><span style="font-size:4.5px;color:#94a3b8">Service Address</span></div>
+                  <div style="background:#0ea5e9;color:#fff;font-size:5.5px;font-weight:700;text-align:center;padding:5px;border-radius:3px;letter-spacing:.3px">REQUEST MY FREE QUOTE →</div>
+                </div>
+                <!-- Footer -->
+                <div style="display:flex;justify-content:space-between;align-items:center;padding:4px 14px;background:#0f172a;flex-shrink:0">
+                  <div style="font-size:3.5px;color:#475569">© 2025 ProWash Co · Atlanta, GA</div>
+                  <div style="font-size:4.5px;color:#0ea5e9;font-weight:700">(404) 555-0123</div>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <!-- Floating badges -->
           <div class="gem-badge gem-badge-1">
@@ -180,7 +223,7 @@
   </section>
 
   <!-- TICKER -->
-  <div class="ticker-wrap">
+  <div class="ticker-wrap" aria-hidden="true">
     <div class="ticker-track">
       <div class="ticker-inner">
         <span>More Jobs Online</span><span class="td">✦</span>
@@ -191,7 +234,6 @@
         <span>Mobile-First Design</span><span class="td">✦</span>
         <span>7-Day Delivery</span><span class="td">✦</span>
         <span>Managed Hosting</span><span class="td">✦</span>
-        <!-- duplicate -->
         <span>More Jobs Online</span><span class="td">✦</span>
         <span>Google Maps Ready</span><span class="td">✦</span>
         <span>Local SEO Built-In</span><span class="td">✦</span>
@@ -205,21 +247,21 @@
   </div>
 
   <!-- ══════════════════════════════ PORTFOLIO ══════════════════════════════════ -->
-  <section class="portfolio-section" id="portfolio">
+  <section class="portfolio-section" id="portfolio" aria-labelledby="portfolio-heading">
     <div class="container">
-      <div class="section-label" data-reveal="fade-up"><span class="lline"></span><span>Example Sites</span></div>
+      <div class="section-label" data-reveal="fade-up"><span class="lline" aria-hidden="true"></span><span>Example Sites</span></div>
       <div class="portfolio-header">
-        <h2 class="section-heading" data-reveal="fade-up" data-delay="80">
+        <h2 class="section-heading" id="portfolio-heading" data-reveal="fade-up" data-delay="80">
           What your site<br/><em>could look like.</em>
         </h2>
-        <p class="section-sub" data-reveal="fade-up" data-delay="180">Every site is custom-built for your business. Here are examples of what we create for pressure washing companies.</p>
+        <p class="section-sub" data-reveal="fade-up" data-delay="180">Every site is custom-built for your pressure washing business. Three styles — choose the vibe that fits your brand.</p>
       </div>
     </div>
 
     <div class="portfolio-grid portfolio-grid-3">
 
       <!-- Card 1: ProWash Co — Light / Modern -->
-      <div class="port-card" data-tilt data-reveal="fade-up" data-delay="0">
+      <article class="port-card" data-tilt data-reveal="fade-up" data-delay="0">
         <div class="port-preview">
           <div class="mini-site full-preview" style="background:#f8fafc;font-family:system-ui,sans-serif;display:flex;flex-direction:column">
 
@@ -298,7 +340,7 @@
               </div>
             </div>
 
-            <!-- Quote form mini -->
+            <!-- Quote form -->
             <div style="padding:6px 10px 5px;background:#f8fafc;flex:1">
               <div style="font-size:5.5px;font-weight:700;color:#0f172a;margin-bottom:3px">Get Your Free Estimate Today</div>
               <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;margin-bottom:2px">
@@ -316,19 +358,19 @@
             </div>
 
           </div>
-          <div class="port-shine"></div>
+          <div class="port-shine" aria-hidden="true"></div>
         </div>
         <div class="port-info">
           <div>
             <h3>Clean &amp; Modern — Light Style</h3>
-            <p>Professional light design with Google reviews, service pricing, and an instant quote form. Built to convert.</p>
+            <p>Professional light design with Google reviews, service pricing, and an instant quote form. Built to convert visitors into calls.</p>
           </div>
-          <div class="port-tags"><span>Light Design</span><span>Quote Form</span><span>Pricing Listed</span></div>
+          <div class="port-tags" aria-label="Features"><span>Light Design</span><span>Quote Form</span><span>Pricing Listed</span></div>
         </div>
-      </div>
+      </article>
 
       <!-- Card 2: HydroBlast Pro — Bold Dark Orange -->
-      <div class="port-card" data-tilt data-reveal="fade-up" data-delay="80">
+      <article class="port-card" data-tilt data-reveal="fade-up" data-delay="80">
         <div class="port-preview">
           <div class="mini-site full-preview" style="background:#080d17;font-family:system-ui,sans-serif;display:flex;flex-direction:column">
 
@@ -352,13 +394,12 @@
             <div style="background:linear-gradient(150deg,#080d17 0%,#0f1d35 55%,#080d17 100%);padding:8px 10px 6px;position:relative;overflow:hidden;flex-shrink:0">
               <div style="position:absolute;top:0;right:0;width:60px;height:60px;background:radial-gradient(circle,#f9731625,transparent 70%)"></div>
               <div style="font-size:3.5px;color:#f97316;font-weight:600;text-transform:uppercase;letter-spacing:.6px;margin-bottom:2px">📞 Call Now: (813) 555-0199</div>
-              <div style="font-size:14px;font-weight:900;line-height:1;color:#fff;text-transform:uppercase;letter-spacing:-.5px;margin-bottom:3px">POWER.<br/>CLEAN.<br/><span style="color:#f97316;-webkit-text-stroke:.3px #f97316">RESULTS.</span></div>
+              <div style="font-size:14px;font-weight:900;line-height:1;color:#fff;text-transform:uppercase;letter-spacing:-.5px;margin-bottom:3px">POWER.<br/>CLEAN.<br/><span style="color:#f97316">RESULTS.</span></div>
               <div style="font-size:3.8px;color:#94a3b8;margin-bottom:5px;line-height:1.4;max-width:100px">Commercial &amp; residential pressure washing in Tampa Bay. Driveways, roofs, fleets &amp; more.</div>
               <div style="display:flex;align-items:center;gap:3px;margin-bottom:5px">
                 <div style="background:#f97316;color:#fff;font-size:4px;font-weight:700;padding:3px 7px;border-radius:2px;letter-spacing:.3px;text-transform:uppercase">GET FREE QUOTE →</div>
                 <div style="border:1px solid #f9731640;font-size:3.5px;color:#f97316;padding:2px 5px;border-radius:2px">View Work</div>
               </div>
-              <!-- Stars -->
               <div style="display:flex;align-items:center;gap:2px">
                 <span style="color:#f59e0b;font-size:5.5px">★★★★★</span>
                 <span style="font-size:3.8px;color:#f9fafb;font-weight:700">4.9</span>
@@ -420,19 +461,19 @@
             </div>
 
           </div>
-          <div class="port-shine"></div>
+          <div class="port-shine" aria-hidden="true"></div>
         </div>
         <div class="port-info">
           <div>
             <h3>Bold Impact — Dark Orange Style</h3>
-            <p>High-energy dark design with before/after comparison, urgency ribbon, and aggressive CTAs that drive calls.</p>
+            <p>High-energy dark design with before/after comparison, urgency ribbon, and aggressive CTAs that drive calls and bookings.</p>
           </div>
-          <div class="port-tags"><span>Dark Theme</span><span>Before/After</span><span>High Conversion</span></div>
+          <div class="port-tags" aria-label="Features"><span>Dark Theme</span><span>Before/After</span><span>High Conversion</span></div>
         </div>
-      </div>
+      </article>
 
       <!-- Card 3: Prestige Soft Wash — Premium Dark Teal -->
-      <div class="port-card" data-tilt data-reveal="fade-up" data-delay="160">
+      <article class="port-card" data-tilt data-reveal="fade-up" data-delay="160">
         <div class="port-preview">
           <div class="mini-site full-preview" style="background:#0a0f0d;font-family:system-ui,sans-serif;display:flex;flex-direction:column">
 
@@ -482,30 +523,15 @@
 
             <!-- Trust badges -->
             <div style="display:flex;justify-content:space-around;align-items:center;padding:5px 8px;background:#0b1310;border-top:1px solid #10b98118;border-bottom:1px solid #10b98118;flex-shrink:0">
-              <div style="text-align:center">
-                <div style="font-size:6px">🛡️</div>
-                <div style="font-size:3px;color:#6b7280;margin-top:1px">Licensed</div>
-              </div>
+              <div style="text-align:center"><div style="font-size:6px">🛡️</div><div style="font-size:3px;color:#6b7280;margin-top:1px">Licensed</div></div>
               <div style="width:1px;height:14px;background:#1e2d26"></div>
-              <div style="text-align:center">
-                <div style="font-size:6px">✅</div>
-                <div style="font-size:3px;color:#6b7280;margin-top:1px">Insured</div>
-              </div>
+              <div style="text-align:center"><div style="font-size:6px">✅</div><div style="font-size:3px;color:#6b7280;margin-top:1px">Insured</div></div>
               <div style="width:1px;height:14px;background:#1e2d26"></div>
-              <div style="text-align:center">
-                <div style="font-size:6px">⭐</div>
-                <div style="font-size:3px;color:#6b7280;margin-top:1px">5.0 Rating</div>
-              </div>
+              <div style="text-align:center"><div style="font-size:6px">⭐</div><div style="font-size:3px;color:#6b7280;margin-top:1px">5.0 Rating</div></div>
               <div style="width:1px;height:14px;background:#1e2d26"></div>
-              <div style="text-align:center">
-                <div style="font-size:6px">📋</div>
-                <div style="font-size:3px;color:#6b7280;margin-top:1px">Free Quotes</div>
-              </div>
+              <div style="text-align:center"><div style="font-size:6px">📋</div><div style="font-size:3px;color:#6b7280;margin-top:1px">Free Quotes</div></div>
               <div style="width:1px;height:14px;background:#1e2d26"></div>
-              <div style="text-align:center">
-                <div style="font-size:6px">🏠</div>
-                <div style="font-size:3px;color:#6b7280;margin-top:1px">10yr Exp.</div>
-              </div>
+              <div style="text-align:center"><div style="font-size:6px">🏠</div><div style="font-size:3px;color:#6b7280;margin-top:1px">10yr Exp.</div></div>
             </div>
 
             <!-- Testimonial snippet -->
@@ -526,70 +552,149 @@
             </div>
 
           </div>
-          <div class="port-shine"></div>
+          <div class="port-shine" aria-hidden="true"></div>
         </div>
         <div class="port-info">
           <div>
             <h3>Premium Elegant — Dark Teal Style</h3>
-            <p>Sophisticated dark design with trust badges, testimonials, and a premium feel that attracts high-end clients.</p>
+            <p>Sophisticated dark design with trust badges, testimonials, and a premium feel that attracts high-value clients.</p>
           </div>
-          <div class="port-tags"><span>Premium Dark</span><span>Testimonials</span><span>Trust Badges</span></div>
+          <div class="port-tags" aria-label="Features"><span>Premium Dark</span><span>Testimonials</span><span>Trust Badges</span></div>
         </div>
-      </div>
+      </article>
 
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ WHY FORGE DIGITAL ════════════════════════════════ -->
+  <section class="why-section" aria-labelledby="why-heading">
+    <div class="container">
+      <div class="section-label" data-reveal="fade-up"><span class="lline" aria-hidden="true"></span><span>Why Us</span></div>
+      <h2 class="section-heading" id="why-heading" data-reveal="fade-up" data-delay="80">
+        Built for this trade.<br/><em>Not a generic template.</em>
+      </h2>
+      <div class="why-grid">
+
+        <div class="why-item" data-reveal="fade-up" data-delay="0">
+          <div class="why-icon" aria-hidden="true">🎯</div>
+          <div class="why-item-accent">Niche-Specific</div>
+          <h3>Made for Pressure Washers</h3>
+          <p>Every section — services, before/after gallery, quote forms, service areas — is built specifically for your trade, not adapted from a restaurant template.</p>
+        </div>
+
+        <div class="why-item" data-reveal="fade-up" data-delay="60">
+          <div class="why-icon" aria-hidden="true">📱</div>
+          <div class="why-item-accent">Proven Layout</div>
+          <h3>Designed to Get You Calls</h3>
+          <p>Every element is placed to convert: star ratings front and center, CTAs that pop, trust signals where they matter. Visitors become quote requests.</p>
+        </div>
+
+        <div class="why-item" data-reveal="fade-up" data-delay="120">
+          <div class="why-icon" aria-hidden="true">⚡</div>
+          <div class="why-item-accent">Fast Turnaround</div>
+          <h3>Live in 7 Business Days</h3>
+          <p>Not 6 weeks. Not endless revision cycles. Order, fill the form, get a preview in 7 days, approve it — your site goes live. That simple.</p>
+        </div>
+
+        <div class="why-item" data-reveal="fade-up" data-delay="180">
+          <div class="why-icon" aria-hidden="true">🛡️</div>
+          <div class="why-item-accent">Fully Managed</div>
+          <h3>We Handle the Tech Forever</h3>
+          <p>Hosting, SSL, backups, uptime monitoring, updates — all handled. You focus on washing, we keep your site fast, secure, and live.</p>
+        </div>
+
+      </div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════ SERVICES ═════════════════════════════════ -->
-  <section class="services-section" id="services">
+  <section class="services-section" id="services" aria-labelledby="services-heading">
     <div class="container">
-      <div class="section-label" data-reveal="fade-up"><span class="lline"></span><span>What You Get</span></div>
-      <h2 class="section-heading" data-reveal="fade-up" data-delay="80">Everything a pressure<br/><em>washing business needs.</em></h2>
+      <div class="section-label" data-reveal="fade-up"><span class="lline" aria-hidden="true"></span><span>What You Get</span></div>
+      <h2 class="section-heading" id="services-heading" data-reveal="fade-up" data-delay="80">Everything a pressure<br/><em>washing business needs.</em></h2>
     </div>
-    <div class="svc-list">
-      <div class="svc-item" data-reveal="fade-up"><div class="svc-num">01</div><div class="svc-body"><h3>Custom Pressure Washing Website</h3><p>Built specifically for your trade — service pages, service area, photo gallery, and a design that makes customers trust you before they even call.</p></div><div class="svc-arrow">→</div></div>
-      <div class="svc-item" data-reveal="fade-up" data-delay="60"><div class="svc-num">02</div><div class="svc-body"><h3>Local SEO &amp; Google Maps</h3><p>Show up when homeowners in your area search "pressure washing near me." We build local SEO into the foundation so you rank where it counts.</p></div><div class="svc-arrow">→</div></div>
-      <div class="svc-item" data-reveal="fade-up" data-delay="120"><div class="svc-num">03</div><div class="svc-body"><h3>Quote Request Form</h3><p>Stop missing leads. A smart quote form captures customer name, address, and job details automatically — straight to your inbox.</p></div><div class="svc-arrow">→</div></div>
-      <div class="svc-item" data-reveal="fade-up" data-delay="180"><div class="svc-num">04</div><div class="svc-body"><h3>Before &amp; After Gallery</h3><p>Your best work is your best salesperson. A clean, professional gallery of transformations turns visitors into paying customers.</p></div><div class="svc-arrow">→</div></div>
-      <div class="svc-item" data-reveal="fade-up" data-delay="240"><div class="svc-num">05</div><div class="svc-body"><h3>Managed Hosting &amp; Maintenance</h3><p>You pressure wash, we handle the rest. Premium servers, SSL, daily backups, uptime monitoring. Your site stays fast and live — always.</p></div><div class="svc-arrow">→</div></div>
+    <div class="svc-list" role="list">
+      <div class="svc-item" data-reveal="fade-up" role="listitem">
+        <div class="svc-num" aria-hidden="true">01</div>
+        <div class="svc-body">
+          <h3>Custom Pressure Washing Website</h3>
+          <p>Built specifically for your trade — service pages, service area, photo gallery, and a design that makes customers trust you before they even call.</p>
+        </div>
+        <div class="svc-arrow" aria-hidden="true">→</div>
+      </div>
+      <div class="svc-item" data-reveal="fade-up" data-delay="60" role="listitem">
+        <div class="svc-num" aria-hidden="true">02</div>
+        <div class="svc-body">
+          <h3>Local SEO &amp; Google Maps</h3>
+          <p>Show up when homeowners in your area search "pressure washing near me." We build local SEO into the foundation so you rank where it counts.</p>
+        </div>
+        <div class="svc-arrow" aria-hidden="true">→</div>
+      </div>
+      <div class="svc-item" data-reveal="fade-up" data-delay="120" role="listitem">
+        <div class="svc-num" aria-hidden="true">03</div>
+        <div class="svc-body">
+          <h3>Quote Request Form</h3>
+          <p>Stop missing leads. A smart quote form captures customer name, address, and job details automatically — straight to your inbox.</p>
+        </div>
+        <div class="svc-arrow" aria-hidden="true">→</div>
+      </div>
+      <div class="svc-item" data-reveal="fade-up" data-delay="180" role="listitem">
+        <div class="svc-num" aria-hidden="true">04</div>
+        <div class="svc-body">
+          <h3>Before &amp; After Gallery</h3>
+          <p>Your best work is your best salesperson. A clean, professional gallery of transformations turns website visitors into paying customers.</p>
+        </div>
+        <div class="svc-arrow" aria-hidden="true">→</div>
+      </div>
+      <div class="svc-item" data-reveal="fade-up" data-delay="240" role="listitem">
+        <div class="svc-num" aria-hidden="true">05</div>
+        <div class="svc-body">
+          <h3>Managed Hosting &amp; Maintenance</h3>
+          <p>You pressure wash, we handle the rest. Premium servers, SSL, daily backups, uptime monitoring. Your site stays fast and live — always.</p>
+        </div>
+        <div class="svc-arrow" aria-hidden="true">→</div>
+      </div>
     </div>
   </section>
 
   <!-- ═══════════════════════════════ HOW IT WORKS ══════════════════════════════ -->
-  <section class="hiw-section" id="how-it-works">
+  <section class="hiw-section" id="how-it-works" aria-labelledby="hiw-heading">
     <div class="container">
-      <div class="section-label" data-reveal="fade-up"><span class="lline"></span><span>The Process</span></div>
-      <h2 class="section-heading" data-reveal="fade-up" data-delay="80">From order to live<br/><em>in 7 days.</em></h2>
+      <div class="section-label" data-reveal="fade-up"><span class="lline" aria-hidden="true"></span><span>The Process</span></div>
+      <h2 class="section-heading" id="hiw-heading" data-reveal="fade-up" data-delay="80">From order to live<br/><em>in 7 days.</em></h2>
       <p class="section-sub" data-reveal="fade-up" data-delay="160">No calls. No meetings. No chasing anyone. Just a simple 4-step process.</p>
 
       <div class="hiw-steps">
 
         <div class="hiw-step" data-reveal="fade-up" data-delay="0">
-          <div class="hiw-step-num">STEP 01</div>
-          <div class="hiw-step-icon">💳</div>
+          <div class="hiw-step-num" aria-label="Step 1">STEP 01</div>
+          <div class="hiw-step-icon" aria-hidden="true">💳</div>
           <h3>Order Online</h3>
           <p>Pick your plan and pay securely with a credit card. Takes 2 minutes. No calls, no back-and-forth.</p>
+          <div class="hiw-step-arrow" aria-hidden="true">→</div>
         </div>
 
         <div class="hiw-step" data-reveal="fade-up" data-delay="80">
-          <div class="hiw-step-num">STEP 02</div>
-          <div class="hiw-step-icon">📋</div>
+          <div class="hiw-step-num" aria-label="Step 2">STEP 02</div>
+          <div class="hiw-step-icon" aria-hidden="true">📋</div>
           <h3>Fill the Questionnaire</h3>
-          <p>After payment, you'll fill a short questionnaire — business name, services, area, colors, and photos. Takes about 10 minutes.</p>
+          <p>After payment, fill a 10-minute form — business name, services, area, colors, and photos. That's all we need.</p>
+          <div class="hiw-step-arrow" aria-hidden="true">→</div>
         </div>
 
         <div class="hiw-step" data-reveal="fade-up" data-delay="160">
-          <div class="hiw-step-num">STEP 03</div>
-          <div class="hiw-step-icon">🔨</div>
+          <div class="hiw-step-num" aria-label="Step 3">STEP 03</div>
+          <div class="hiw-step-icon" aria-hidden="true">🔨</div>
           <h3>We Build It</h3>
-          <p>We design and build your custom site. You'll get a preview link within 7 business days to review before it goes live.</p>
+          <p>We design and build your custom site. You'll receive a preview link within 7 business days to review before anything goes live.</p>
+          <div class="hiw-step-arrow" aria-hidden="true">→</div>
         </div>
 
         <div class="hiw-step" data-reveal="fade-up" data-delay="240">
-          <div class="hiw-step-num">STEP 04</div>
-          <div class="hiw-step-icon">🚀</div>
+          <div class="hiw-step-num" aria-label="Step 4">STEP 04</div>
+          <div class="hiw-step-icon" aria-hidden="true">🚀</div>
           <h3>Go Live &amp; Get Jobs</h3>
-          <p>Your site goes live. Customers find you on Google. Quote requests start coming in — no cold calls required.</p>
+          <p>Your site goes live. Customers find you on Google. Quote requests start coming in — no cold calls needed.</p>
         </div>
 
       </div>
@@ -597,10 +702,10 @@
   </section>
 
   <!-- ════════════════════════════════ PRICING ═════════════════════════════════ -->
-  <section class="pricing-section" id="pricing">
+  <section class="pricing-section" id="pricing" aria-labelledby="pricing-heading">
     <div class="container">
-      <div class="section-label" data-reveal="fade-up"><span class="lline"></span><span>Investment</span></div>
-      <h2 class="section-heading" data-reveal="fade-up" data-delay="80">Simple, honest<br/><em>pricing.</em></h2>
+      <div class="section-label" data-reveal="fade-up"><span class="lline" aria-hidden="true"></span><span>Investment</span></div>
+      <h2 class="section-heading" id="pricing-heading" data-reveal="fade-up" data-delay="80">Simple, honest<br/><em>pricing.</em></h2>
       <p class="section-sub" data-reveal="fade-up" data-delay="160">One price for the build. Optional monthly maintenance to keep everything running perfectly.</p>
 
       <div class="pricing-cards" data-reveal="fade-up" data-delay="240">
@@ -610,7 +715,7 @@
           <div class="pc-top">
             <div class="pc-badge">Most Popular</div>
             <h3 class="pc-name">Complete Package</h3>
-            <p class="pc-desc">Your site built, hosted, and maintained — everything handled for you.</p>
+            <p class="pc-desc">Your site built, hosted, and maintained — everything handled for you, forever.</p>
           </div>
           <div class="pc-price-block">
             <div class="pc-price"><span class="pc-cur">$</span><span class="pc-amt">499</span><span class="pc-cent">.99</span></div>
@@ -619,21 +724,24 @@
             <div class="pc-sub-price"><span class="pc-sub-amt">$34.99</span><span class="pc-sub-per">/month</span></div>
             <div class="pc-sub-label">managed hosting &amp; maintenance</div>
           </div>
-          <ul class="pc-features">
-            <li><span class="cf">✦</span>Custom design from scratch</li>
-            <li><span class="cf">✦</span>Up to 5 pages</li>
-            <li><span class="cf">✦</span>Mobile responsive &amp; SEO ready</li>
-            <li><span class="cf">✦</span>Before/after photo gallery</li>
-            <li><span class="cf">✦</span>Quote request form</li>
-            <li><span class="cf">✦</span>2 rounds of revisions</li>
-            <li><span class="cf">✦</span>Premium managed hosting</li>
-            <li><span class="cf">✦</span>SSL + daily backups</li>
-            <li><span class="cf">✦</span>Monthly maintenance &amp; updates</li>
-            <li><span class="cf">✦</span>Priority support</li>
+          <ul class="pc-features" aria-label="Package features">
+            <li><span class="cf" aria-hidden="true">✦</span>Custom design from scratch</li>
+            <li><span class="cf" aria-hidden="true">✦</span>Up to 5 pages</li>
+            <li><span class="cf" aria-hidden="true">✦</span>Mobile responsive &amp; SEO ready</li>
+            <li><span class="cf" aria-hidden="true">✦</span>Before/after photo gallery</li>
+            <li><span class="cf" aria-hidden="true">✦</span>Quote request form</li>
+            <li><span class="cf" aria-hidden="true">✦</span>2 rounds of revisions</li>
+            <li><span class="cf" aria-hidden="true">✦</span>Premium managed hosting</li>
+            <li><span class="cf" aria-hidden="true">✦</span>SSL + daily backups</li>
+            <li><span class="cf" aria-hidden="true">✦</span>Monthly maintenance &amp; updates</li>
+            <li><span class="cf" aria-hidden="true">✦</span>Priority support</li>
           </ul>
-          <button class="btn-gold btn-full checkout-btn" data-plan="complete" id="btn-complete">
+          <button class="checkout-btn btn-gold" data-plan="complete" id="btn-complete" type="button">
             <span class="btn-text">Order Now →</span>
-            <span class="btn-loading hidden">Processing…</span>
+            <span class="btn-loading hidden" aria-live="polite">
+              <span class="btn-spinner" aria-hidden="true"></span>
+              Processing…
+            </span>
           </button>
           <p class="pc-secure">🔒 Secure checkout via Stripe</p>
         </div>
@@ -648,25 +756,28 @@
           <div class="pc-price-block">
             <div class="pc-price"><span class="pc-cur">$</span><span class="pc-amt">499</span><span class="pc-cent">.99</span></div>
             <div class="pc-price-label">one-time payment</div>
-            <div class="pc-plus" style="opacity:0">+</div>
+            <div class="pc-plus" aria-hidden="true" style="opacity:0">+</div>
             <div class="pc-sub-price"><span class="pc-sub-amt" style="color:var(--muted)">No</span><span class="pc-sub-per" style="color:var(--muted)"> subscription</span></div>
             <div class="pc-sub-label">hosting not included</div>
           </div>
-          <ul class="pc-features">
-            <li><span class="cf">✦</span>Custom design from scratch</li>
-            <li><span class="cf">✦</span>Up to 5 pages</li>
-            <li><span class="cf">✦</span>Mobile responsive &amp; SEO ready</li>
-            <li><span class="cf">✦</span>Before/after photo gallery</li>
-            <li><span class="cf">✦</span>Quote request form</li>
-            <li><span class="cf">✦</span>2 rounds of revisions</li>
-            <li><span class="cf cf-off">—</span><span style="color:var(--muted)">Hosting not included</span></li>
-            <li><span class="cf cf-off">—</span><span style="color:var(--muted)">Maintenance not included</span></li>
-            <li><span class="cf cf-off">—</span><span style="color:var(--muted)">No uptime monitoring</span></li>
-            <li><span class="cf cf-off">—</span><span style="color:var(--muted)">Standard support</span></li>
+          <ul class="pc-features" aria-label="Package features">
+            <li><span class="cf" aria-hidden="true">✦</span>Custom design from scratch</li>
+            <li><span class="cf" aria-hidden="true">✦</span>Up to 5 pages</li>
+            <li><span class="cf" aria-hidden="true">✦</span>Mobile responsive &amp; SEO ready</li>
+            <li><span class="cf" aria-hidden="true">✦</span>Before/after photo gallery</li>
+            <li><span class="cf" aria-hidden="true">✦</span>Quote request form</li>
+            <li><span class="cf" aria-hidden="true">✦</span>2 rounds of revisions</li>
+            <li><span class="cf cf-off" aria-hidden="true">—</span><span style="color:var(--muted)">Hosting not included</span></li>
+            <li><span class="cf cf-off" aria-hidden="true">—</span><span style="color:var(--muted)">Maintenance not included</span></li>
+            <li><span class="cf cf-off" aria-hidden="true">—</span><span style="color:var(--muted)">No uptime monitoring</span></li>
+            <li><span class="cf cf-off" aria-hidden="true">—</span><span style="color:var(--muted)">Standard support</span></li>
           </ul>
-          <button class="btn-outline btn-full checkout-btn" data-plan="build-only" id="btn-build-only">
+          <button class="checkout-btn btn-outline" data-plan="build-only" id="btn-build-only" type="button">
             <span class="btn-text">Order Now →</span>
-            <span class="btn-loading hidden">Processing…</span>
+            <span class="btn-loading hidden" aria-live="polite">
+              <span class="btn-spinner" aria-hidden="true"></span>
+              Processing…
+            </span>
           </button>
           <p class="pc-secure">🔒 Secure checkout via Stripe</p>
         </div>
@@ -674,25 +785,27 @@
       </div>
 
       <!-- Error message -->
-      <p id="checkoutError" class="checkout-error hidden">Something went wrong. Please try again or email us at hello@forgedigital.us.com</p>
+      <p id="checkoutError" class="checkout-error hidden" role="alert" aria-live="polite">Something went wrong. Please try again or email us at hello@forgedigital.us.com</p>
 
-      <!-- FAQ mini -->
+      <!-- FAQ -->
       <div class="pricing-faq" data-reveal="fade-up" data-delay="400">
-        <div class="pfaq-item">
-          <strong>What do I need to provide?</strong>
-          <p>After payment, you'll fill a short questionnaire — business name, services, service area, your colors, and any photos. That's it.</p>
-        </div>
-        <div class="pfaq-item">
-          <strong>Do I need to get on a call?</strong>
-          <p>Nope. The entire process is handled online. No discovery calls, no Zoom meetings.</p>
-        </div>
-        <div class="pfaq-item">
-          <strong>What if I don't have a logo or photos?</strong>
-          <p>No problem. We can work with a business name only. Photos help, but they're optional — you can send them later.</p>
-        </div>
-        <div class="pfaq-item">
-          <strong>Can I cancel the monthly plan?</strong>
-          <p>Yes, anytime. Cancel through the customer portal with one click. Your site will still exist; you just handle hosting yourself.</p>
+        <div class="pfaq-grid">
+          <div class="pfaq-item">
+            <h4>What do I need to provide?</h4>
+            <p>After payment, you'll fill a short questionnaire — business name, services, service area, your colors, and any photos. That's it.</p>
+          </div>
+          <div class="pfaq-item">
+            <h4>Do I need to get on a call?</h4>
+            <p>Nope. The entire process is handled online. No discovery calls, no Zoom meetings — ever.</p>
+          </div>
+          <div class="pfaq-item">
+            <h4>What if I don't have a logo or photos?</h4>
+            <p>No problem. We can work with a business name only. Photos help, but they're optional — you can send them later.</p>
+          </div>
+          <div class="pfaq-item">
+            <h4>Can I cancel the monthly plan?</h4>
+            <p>Yes, anytime. Cancel through the customer portal with one click. Your site stays up; you just handle hosting yourself.</p>
+          </div>
         </div>
       </div>
 
@@ -702,10 +815,10 @@
   <!-- CINEMATIC FOOTER -->
   <div class="cf-curtain" id="cfCurtain">
     <footer class="cf-footer" id="cfFooter">
-      <div class="cf-aurora" id="cfAurora"></div>
-      <div class="cf-grid"></div>
+      <div class="cf-aurora" id="cfAurora" aria-hidden="true"></div>
+      <div class="cf-grid" aria-hidden="true"></div>
       <div class="cf-giant-text" id="cfGiantText" aria-hidden="true">FORGE</div>
-      <div class="cf-marquee-wrap">
+      <div class="cf-marquee-wrap" aria-hidden="true">
         <div class="cf-marquee-track" id="cfMarqueeTrack">
           <div class="cf-marquee-inner">
             <span>Pressure Washing Websites</span><span class="cf-dot">✦</span>
@@ -726,8 +839,8 @@
         <div class="cf-pills" id="cfPills">
           <div class="cf-pills-row">
             <a href="#pricing" class="cf-pill cf-pill--primary cf-magnetic">Order Now — $499</a>
-            <a href="https://tiktok.com/@forgedigital" target="_blank" rel="noopener" class="cf-pill cf-pill--primary cf-magnetic">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.77a4.85 4.85 0 01-1.01-.08z"/></svg>
+            <a href="https://tiktok.com/@forgedigital" target="_blank" rel="noopener noreferrer" class="cf-pill cf-pill--primary cf-magnetic" aria-label="Forge Digital on TikTok">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.78 1.52V6.77a4.85 4.85 0 01-1.01-.08z"/></svg>
               @forgedigital
             </a>
           </div>
@@ -740,11 +853,11 @@
         <span class="cf-copy">© 2026 Forge Digital. All rights reserved.</span>
         <div class="cf-badge cf-magnetic">
           <span>Crafted with</span>
-          <span class="cf-heart">❤</span>
+          <span class="cf-heart" aria-hidden="true">❤</span>
           <span>by <strong>Forge Digital</strong></span>
         </div>
         <button class="cf-pill cf-pill--icon cf-magnetic" id="cfTopBtn" aria-label="Back to top">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
         </button>
       </div>
     </footer>

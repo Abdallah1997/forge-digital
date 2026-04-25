@@ -27,12 +27,17 @@ const $$ = (s, c=document) => [...c.querySelectorAll(s)];
   if(!btn) return;
   const toggle=open=>{
     btn.classList.toggle('open',open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
     drawer.classList.toggle('open',open);
+    drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
     overlay.classList.toggle('open',open);
+    overlay.setAttribute('aria-hidden', open ? 'false' : 'true');
     document.body.style.overflow=open?'hidden':'';
+    if(open) { const first=drawer.querySelector('a'); if(first) first.focus(); }
   };
   btn.addEventListener('click',()=>toggle(!drawer.classList.contains('open')));
   overlay.addEventListener('click',()=>toggle(false));
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape' && drawer.classList.contains('open')) toggle(false); });
   $$('.drawer-link,.drawer-cta').forEach(l=>l.addEventListener('click',()=>toggle(false)));
 })();
 
