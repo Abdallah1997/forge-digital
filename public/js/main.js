@@ -7,18 +7,10 @@ const $$ = (s, c=document) => [...c.querySelectorAll(s)];
 
 /* ── Custom Cursor ─────────────────────────────────────────── */
 (function(){
-  const dot = $('#cursorDot'), ring = $('#cursorRing');
-  if (!dot || !ring || window.matchMedia('(hover:none)').matches) return;
-  let mx=-100, my=-100, rx=-100, ry=-100;
-  document.addEventListener('mousemove', e=>{ mx=e.clientX; my=e.clientY; dot.style.cssText=`left:${mx}px;top:${my}px`; });
-  (function animRing(){
-    rx += (mx-rx)*.11; ry += (my-ry)*.11;
-    ring.style.cssText=`left:${rx}px;top:${ry}px`;
-    requestAnimationFrame(animRing);
-  })();
-  $$('a,button,.port-card,.svc-item').forEach(el=>{
-    el.addEventListener('mouseenter',()=>ring.classList.add('hovered'));
-    el.addEventListener('mouseleave',()=>ring.classList.remove('hovered'));
+  const dot = $('#cursorDot');
+  if (!dot || window.matchMedia('(hover:none)').matches) return;
+  document.addEventListener('mousemove', e=>{
+    dot.style.cssText=`left:${e.clientX}px;top:${e.clientY}px`;
   });
 })();
 
