@@ -147,8 +147,8 @@ ul{list-style:none}
 /* Floating badges (reused) */
 .gem-badge{position:absolute;display:flex;align-items:center;gap:.55rem;background:rgba(14,14,14,.9);border:1px solid rgba(234,88,12,.22);backdrop-filter:blur(14px);border-radius:8px;padding:.55rem .9rem;font-size:.76rem;color:var(--text);white-space:nowrap;box-shadow:0 8px 24px rgba(0,0,0,.45);z-index:10}
 .gem-badge-1{top:25px;right:-14px;animation:gbFloat1 5s ease-in-out infinite}
-.gem-badge-2{bottom:65px;left:-14px;animation:gbFloat2 6s ease-in-out infinite}
-.gem-badge-3{top:115px;left:-24px;animation:gbFloat3 5.5s ease-in-out infinite}
+.gem-badge-2{bottom:65px;left:-148px;animation:gbFloat2 6s ease-in-out infinite}
+.gem-badge-3{top:115px;left:-158px;animation:gbFloat3 5.5s ease-in-out infinite}
 @keyframes gbFloat1{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
 @keyframes gbFloat2{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
 @keyframes gbFloat3{0%,100%{transform:translateY(-3px)}50%{transform:translateY(4px)}}
