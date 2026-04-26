@@ -9,7 +9,7 @@
   --card:#161616; --card2:#1A1A1A;
   --border:#1E1E1E; --border2:#2A2A2A;
   --text:#EDE9E3; --muted:#6B6460; --faint:#333;
-  --white:#FFF;
+  --white:#FAF8F4;
   --serif:'Rubik',system-ui,sans-serif;
   --sans:'Nunito Sans',system-ui,sans-serif;
   --ease-out:cubic-bezier(.22,1,.36,1);
@@ -289,8 +289,8 @@ ul{list-style:none}
 /* Grid */
 .cf-grid{position:absolute;inset:0;background-size:60px 60px;background-image:linear-gradient(to right,rgba(234,88,12,.03) 1px,transparent 1px),linear-gradient(to bottom,rgba(234,88,12,.03) 1px,transparent 1px);mask-image:linear-gradient(to bottom,transparent,black 25%,black 75%,transparent);-webkit-mask-image:linear-gradient(to bottom,transparent,black 25%,black 75%,transparent);pointer-events:none}
 
-/* Giant background text */
-.cf-giant-text{position:absolute;bottom:-2vh;left:50%;transform:translateX(-50%);font-size:28vw;font-weight:900;letter-spacing:-.04em;white-space:nowrap;pointer-events:none;user-select:none;color:transparent;-webkit-text-stroke:1px rgba(234,88,12,.06);background:linear-gradient(180deg,rgba(234,88,12,.1) 0%,transparent 65%);-webkit-background-clip:text;background-clip:text;line-height:.75;font-family:var(--serif)}
+/* Giant background text — solid tint, no clip-text */
+.cf-giant-text{position:absolute;bottom:-2vh;left:50%;transform:translateX(-50%);font-size:28vw;font-weight:900;letter-spacing:-.04em;white-space:nowrap;pointer-events:none;user-select:none;color:rgba(234,88,12,.07);line-height:.75;font-family:var(--serif)}
 
 /* Marquee */
 .cf-marquee-wrap{position:absolute;top:2.5rem;left:0;width:100%;overflow:hidden;border-top:1px solid rgba(234,88,12,.1);border-bottom:1px solid rgba(234,88,12,.1);background:rgba(8,8,8,.7);backdrop-filter:blur(12px);padding:.75rem 0;transform:rotate(-1.5deg) scaleX(1.1);z-index:10}
@@ -302,8 +302,8 @@ ul{list-style:none}
 /* Center content */
 .cf-center{position:relative;z-index:10;flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 2rem;margin-top:5rem}
 
-/* Heading */
-.cf-heading{font-family:var(--serif);font-size:clamp(2.5rem,7vw,6rem);font-weight:800;letter-spacing:-.02em;text-align:center;line-height:1.05;margin-bottom:2.5rem;background:linear-gradient(180deg,var(--text) 0%,rgba(232,227,218,.4) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 24px rgba(234,88,12,.1))}
+/* Heading — solid color, hierarchy via weight + scale */
+.cf-heading{font-family:var(--serif);font-size:clamp(2.5rem,7vw,6rem);font-weight:800;letter-spacing:-.02em;text-align:center;line-height:1.05;margin-bottom:2.5rem;color:var(--text);text-shadow:0 0 28px rgba(234,88,12,.16)}
 
 /* Pills */
 .cf-pills{display:flex;flex-direction:column;align-items:center;gap:1rem;width:100%}
@@ -396,4 +396,13 @@ a.ci-val:hover{color:var(--gold)}
   .gem-badge-1,.gem-badge-2{display:none}
   .contact-form-card{padding:1.5rem}
   .why-grid{grid-template-columns:1fr}
+}
+
+/* ─── REDUCED MOTION ─── */
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  .hero-browser-scene,.gem-badge-1,.gem-badge-2,.gem-badge-3,.geo-1,.geo-2,.cf-aurora,.live-dot,.cf-heart,.ticker-inner,.cf-marquee-inner,.orb-1,.orb-2,.orb-3{animation:none!important;transform:none!important}
+  [data-reveal]{opacity:1!important;transform:none!important}
+  .price-card:hover{transform:none!important}
+  .svc-item:hover{transform:none!important}
 }
